@@ -1,0 +1,14 @@
+// style.scss
+@use "./base/index" as *;
+@use "./layout/index" as layout;
+@use "./components/index" as comp;
+@use "./pages/index" as page;
+
+body {
+  background: $bg-dark;
+  color: $text-light;
+}
+
+a {
+  color: $text-light;
+}

@@ -1,14 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio_2026</title>
+    <title>seonmi_portfolio_2026</title>
+    <!-- Google Fonts : Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"
+    />
   </head>
   <body>
-    <h1>hellow higlglgll</h1>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="wrap">
+      <header>
+        <h1 id="logo">
+          <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
+        </h1>
+        <nav class="main_nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Process</a></li>
+          </ul>
+        </nav>
+        <div class="hamburg-wrap">
+          <div class="hamburg-box">
+            <div class="hamburg">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 전체 화면 메뉴 (처음엔 숨김일 예정) -->
+      <nav class="nav nav--full">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Process</a></li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <div class="main_textBox">
+          <p>U<span class="pointColor">I</span> / UX <br />Publisher</p>
+          <p>
+            Design <br />
+            Development
+          </p>
+          <p>Front-End</p>
+        </div>
+        <div class="main_imgBox">
+          <img src="src/img/main/mainImg.png" alt="" />
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

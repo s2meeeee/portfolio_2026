@@ -1,0 +1,31 @@
+header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 20px 30px;
+
+  #logo {
+    width: 50px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+header .main_nav ul {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &li {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+.nav--full {
+  display: none;
+}
