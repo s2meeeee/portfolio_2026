@@ -1,14 +1,15 @@
-// style.scss
-@use "./base/index" as *;
-@use "./layout/index" as layout;
-@use "./components/index" as comp;
-@use "./pages/index" as page;
+/* 1) 변수 */
+@import "./base/variables";
 
-body {
-  background: $bg-dark;
-  color: $text-light;
-}
+/* 2) 리셋/기본 */
+@import "./base/reset";
 
-a {
-  color: $text-light;
-}
+/* 3) 전체 레이아웃(=wrap, inner, container 같은 뼈대) */
+@import "./layout/layout";
+
+/* 4) 컴포넌트 */
+@import "./components/header";
+
+/* 5) 페이지 */
+@import "./pages/main";
+

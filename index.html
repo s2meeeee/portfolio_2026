@@ -1,51 +1,27 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>seonmi_portfolio_2026</title>
-    <!-- Google Fonts : Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Pretendard -->
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"
-    />
-  </head>
-  <body>
-    <div class="wrap">
-      <header>
-        <h1 id="logo">
-          <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
-        </h1>
-        <nav class="main_nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Process</a></li>
-          </ul>
-        </nav>
-        <div class="hamburg-wrap">
-          <div class="hamburg-box">
-            <div class="hamburg">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- 전체 화면 메뉴 (처음엔 숨김일 예정) -->
-      <nav class="nav nav--full">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>seonmi_portfolio_2026</title>
+  <!-- Google Fonts : Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Pretendard -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1 id="logo">
+        <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
+      </h1>
+      <nav class="main_nav">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
@@ -53,22 +29,74 @@
           <li><a href="#">Process</a></li>
         </ul>
       </nav>
-
-      <section class="main">
-        <div class="main_textBox">
-          <p>U<span class="pointColor">I</span> / UX <br />Publisher</p>
-          <p>
-            Design <br />
-            Development
-          </p>
-          <p>Front-End</p>
+      <div class="navHamburg">
+        <div class="navHamburg_box">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="main_imgBox">
-          <img src="src/img/main/mainImg.png" alt="" />
-        </div>
-      </section>
-    </div>
+      </div>
+    </header>
+    <!-- 전체 화면 메뉴 -->
+    <nav class="nav nav--full">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Process</a></li>
+      </ul>
+    </nav>
 
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+    <section class="main">
+      <div class="main_textBox">
+        <p>U<span class="pointColor">I</span> / U<span class="pointColor">X</span><br /><span
+            class="pointColor">P</span>ublisher</p>
+        <p>
+          <span class="pointColor">D</span>esign <br />
+          <span class="pointColor">D</span>evelopment
+        </p>
+        <p><span class="pointColor">F</span>ront-<span class="pointColor">E</span>nd</p>
+      </div>
+      <div class="main_imgBox">
+        <div class="circle"></div>
+        <div class="character"></div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="aboutcontent">
+        <div class="about_textBox">
+          <p>I am SeonMi Sim,<br/> a web publisher who adapts quickly to change and embraces new challenges.</p>
+        </div>
+        <div class="about_imgBox"></div>
+        <div class="about_favorite">
+          <div class="favoriteText">
+            <ul>
+              <li><span>What</span></li>
+              <li><span>is My</span></li>
+              <li><span>Favorite</span></li>
+              <li><span>Item?</span></li>
+            </ul>
+          </div>
+          <div class="favorItem">
+            <span class="a item"><img src="/src/img/main/about/favorite01.png" alt=""></span>
+            <span class="c item"><img src="/src/img/main/about/favorite03.png" alt=""></span>
+            <span class="b item"><img src="/src/img/main/about/favorite04.png" alt=""></span>
+            <span class="b item"><img src="/src/img/main/about/favorite05.png" alt=""></span>
+            <span class="c item"><img src="/src/img/main/about/favorite06_w.png" alt=""></span>
+            <span class="b item"><img src="/src/img/main/about/favorite07.png" alt=""></span>
+            <span class="a item"><img src="/src/img/main/about/favorite08.png" alt=""></span>
+            <span class="a item"><img src="/src/img/main/about/favorite09.png" alt=""></span>
+            <span class="c item"><img src="/src/img/main/about/favorite10.png" alt=""></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+<!-- script plugin -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+<!-- script -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

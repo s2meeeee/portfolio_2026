@@ -1,4 +1,20 @@
+body {
+  background: $bg-dark;
+  color: $text-light;
+  font-family: $font-kr;
+}
+
 .wrap {
   margin: 0 auto;
   position: relative;
 }
+section{
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+}
+a {
+  color: $text-light;
+}
+
+
