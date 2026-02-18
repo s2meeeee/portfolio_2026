@@ -1,6 +1,7 @@
 .main {
   width: 100%;
   height: 100vh;
+  background-color: $dark-color;
 
   &_textBox {
     position: relative;
@@ -9,7 +10,6 @@
     text-align: center;
 
     p {
-      
       position: absolute;
       left: 0;
       bottom: 0;
@@ -21,10 +21,6 @@
 
       opacity: 0;
       animation: slideUpFade 9s ease-in-out infinite;
-
-      .pointColor {
-        color: $point-color;
-      }
 
       &:nth-child(1) {
         animation-delay: 0s;
@@ -65,17 +61,17 @@
   }
 }
 
-.main_imgBox{
+.main_imgBox {
   position: relative;
   width: 100%;
   margin-top: 20px;
 
-  > div{
+  > div {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
-  .circle{
+  .circle {
     width: 320px;
     height: 320px;
     background: $point-color;
@@ -83,7 +79,7 @@
     position: absolute;
     z-index: 0;
   }
-  .character{
+  .character {
     width: 200px;
     height: 300px;
     background-image: url(../../img/main/mainImg.png);
@@ -91,17 +87,16 @@
     background-position: center;
     z-index: 10;
     top: 10px;
-    transform: translateX(-50%) scale(0.90); 
+    transform: translateX(-50%) scale(0.9);
     animation: emoji 2s steps(13) infinite;
-
   }
 }
 
-@keyframes emoji{
-  from{
+@keyframes emoji {
+  from {
     background-position: 0 0;
   }
-  to{
+  to {
     background-position: -2600px 0;
   }
 }
@@ -109,112 +104,239 @@
 // con01
 
 .about {
+  width: 80%;
+  height: auto;
   background-color: #fff;
   border-radius: 80px 80px 0 0;
-  color: $bg-dark;
+  color: $dark-color;
 }
 
 .about {
   .aboutcontent {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    position: relative;
-    top: 100px;
-
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 200px;
+    row-gap: 14%;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 0.5fr 1.6fr;
   }
-  .about_textBox {
+}
+
+.about_textBox {
+  box-sizing: border-box;
+  padding: 10% 10% 10% 0px;
+}
+.about_textBox p {
   font-size: 4vw;
   letter-spacing: -1px;
   font-family: $font-main;
-  line-height:130%;
-  padding-bottom: 40px;
+  line-height: 1.2;
+  opacity: 0;
 }
-  .about_favorite {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
+
+//   // about favorite 영역
+
+.about_favorite {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.about_favorite {
+  .favoriteBox {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-.favoriteText ul li{
-  padding: 0px 40px;
+.favoriteText {
+  position: relative;
+}
+.favoriteText ul {
+  width: 100%;
   height: 100%;
   display: flex;
-  overflow: hidden;
+  row-gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.favoriteText ul li {
+  display: flex;
+}
+
+.favoriteText ul li span {
+  font-weight: 500;
+  font-size: 7vw;
   color: $point-color;
 }
 
-.favoriteText ul li span{
-  margin-bottom: 40px;
-  font-weight: 500;
-  font-size: 140px;
-}
-.favoriteText li:nth-child(1) span{
-  margin-right: auto;   /* 왼쪽 */
+.favoriteText ul li:nth-child(1) span {
+  margin-right: auto; /* 왼쪽 */
 }
 
-.favoriteText li:nth-child(2) span{
-  margin-left: auto;    /* 오른쪽 */
+.favoriteText ul li:nth-child(2) span {
+  margin-left: auto; /* 오른쪽 */
   margin-right: 20%;
 }
 
-.favoriteText li:nth-child(3) span{
-  margin-right: auto;   /* 왼쪽 */
+.favoriteText ul li:nth-child(3) span {
+  margin-right: auto; /* 왼쪽 */
   margin-left: 20%;
 }
 
-.favoriteText li:nth-child(4) span{
-  margin-left: auto;    /* 오른쪽 */
+.favoriteText ul li:nth-child(4) span {
+  margin-left: auto; /* 오른쪽 */
 }
-.favorItem {
+
+.favoriteItem {
   position: absolute;
-  inset: 0;  // top/right/bottom/left:0
+  inset: 0;
+}
+
+.favoriteItem {
   display: flex;
-  flex-wrap: wrap;  
-  gap: 20px;
+  .favoriteItem_l,
+  .favoriteItem_r {
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  .item {
+    position: absolute; // ✅ 자유 배치(겹치기)하려면 absolute 추천
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: block;
+  }
+
+  .item img {
+    width: 65%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  //   // 사이즈: a/b/c (span에 같이 붙어있으니까 바로 먹음)
+  .a {
+    width: 13vw;
+    height: 13vw;
+  }
+  .b {
+    width: 10vw;
+    height: 10vw;
+  }
+  .c {
+    width: 7vw;
+    height: 7vw;
+  }
 }
 
-.favorItem .item {
-  border-radius: 50%;
-  border: 1px solid #000;
-  position: absolute;    
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.favorItem .a { width: 250px; height: 250px; }
-.favorItem .b { width: 190px; height: 190px; }
-.favorItem .c { width: 140px; height: 140px; }
-
-.favorItem .item:nth-child(1),
-.favorItem .item:nth-child(2),
-.favorItem .item:nth-child(3){
+.favoriteItem_l .item:nth-child(3),
+.favoriteItem_r .item:nth-child(2) {
   background-color: $point-color;
   border: none;
 }
-.favorItem .item:nth-child(8),
-.favorItem .item:nth-child(5){
-  background-color: $bg-dark;
+
+.favoriteItem_l .item:nth-child(4),
+.favoriteItem_r .item:nth-child(1) {
+  background-color: $dark-color;
   border: none;
 }
 
-.favorItem .item img {
-  width: 65%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.favoriteItem_l .item:nth-child(3) img {
+  width: 45%;
+}
+.favoriteItem_r .item:nth-child(3) img {
+  width: 80%;
 }
 
-.favorItem .item:nth-child(3) img,
-.favorItem .item:nth-child(5) img
- {
-  width: 45%;
+// about favoritem 위치
+
+// favoriteItem left
+.favoriteItem_l .item:nth-child(1) {
+  top: 0%;
+  right: 2%;
+}
+.favoriteItem_l .item:nth-child(2) {
+  top: 20%;
+  left: 40%;
+}
+.favoriteItem_l .item:nth-child(3) {
+  top: 30%;
+  left: 5%;
+}
+.favoriteItem_l .item:nth-child(4) {
+  bottom: 10%;
+  left: 25%;
+}
+.favoriteItem_l .item:nth-child(5) {
+  bottom: 20%;
+  right: 10%;
+}
+
+// right item
+
+.favoriteItem_r .item:nth-child(1) {
+  top: -2%;
+  right: 30%;
+}
+.favoriteItem_r .item:nth-child(2) {
+  top: 43%;
+  left: 25%;
+}
+.favoriteItem_r .item:nth-child(3) {
+  bottom: 5%;
+  left: 5%;
+}
+.favoriteItem_r .item:nth-child(4) {
+  top: 30%;
+  right: 5%;
+}
+
+// abouttext
+
+.abouttext {
+  margin-top: 5%;
+  text-align: center;
+  padding: 10% 0;
+
+  h3 {
+    font-size: 2vw;
+  }
+  .fa-angles-down {
+    padding-top: 20px;
+    font-size: 40px;
+  }
+}
+
+// video
+.video {
+  width: 100%;
+  height: 100vh;
+}
+.videoWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.videoBox {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+  overflow: hidden;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

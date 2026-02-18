@@ -1,28 +1,30 @@
 header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  padding:40px;
   box-sizing: border-box;
   z-index: 999;
- 
+}
+.headerbox {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 40px;
 }
 
- #logo {
-    width: 50px;
+#logo {
+  width: 50px;
 
-    img {
-      width: 100%;
-    }
+  img {
+    width: 100%;
   }
+}
 
 header .main_nav ul {
   display: flex;
   justify-content: space-between;
-
 
   li {
     font-size: 14px;
@@ -31,11 +33,13 @@ header .main_nav ul {
   }
 }
 .main_nav,
-#logo{
-  transition: opacity 0.4s ease, transform 0.4s ease;
+#logo {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
-.navHamburg{
+.navHamburg {
   position: relative;
   width: 50px;
   height: 50px;
@@ -44,39 +48,39 @@ header .main_nav ul {
 
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 
-.navHamburg_box{
+.navHamburg_box {
   width: 40%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  
+  transform: translate(-50%, -50%);
 
-  span{
+  span {
     display: block;
     width: 100%;
     height: 2px;
     background-color: #fff;
-    margin-bottom:5px;
+    margin-bottom: 5px;
   }
 }
 
-.navHamburg .navHamburg_box span:nth-child(3){
+.navHamburg .navHamburg_box span:nth-child(3) {
   margin-bottom: 0px;
 }
 
-header.scrolled{
+header.scrolled {
   .main_nav,
-  #logo{
+  #logo {
     opacity: 0;
     transform: translateY(-10px);
   }
 
-  .navHamburg{
+  .navHamburg {
     opacity: 1;
     transform: translateY(0);
   }
