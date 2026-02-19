@@ -298,41 +298,63 @@
   right: 5%;
 }
 
-// abouttext
 
-.abouttext {
-  margin-top: 5%;
-  text-align: center;
-  padding: 10% 0;
-
-  h3 {
-    font-size: 2vw;
-  }
-  .fa-angles-down {
-    padding-top: 20px;
-    font-size: 40px;
-  }
-}
 
 // video
 .video {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  overflow: hidden;
+  padding-top: 100px;
+  
+}
+.about_circlebox{
+  width: 100%;
+  height:300px;
+  position: relative;
+  overflow: hidden;
+  
+  .aboutcircle,
+  .abouttext{
+    position: absolute;
+  }
+
+}
+.aboutcircle{
+  width: 2000px;
+  height: 1000px;
+  border-radius: 50%;
+  background-color: $dark-color;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.abouttext{
+  width: 100%;
+  top:25%;
+  color: #fff;
+  text-align: center;
+
+  h3{
+    font-size: 2vw;
+    padding-bottom: 20px;
+  }
 }
 .videoWrap {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: 100vh;
+  background-color: $dark-color;
+    position: relative;
+
 }
 .videoBox {
   width: 90%;
   height: 90%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 40px;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   video {
     width: 100%;
