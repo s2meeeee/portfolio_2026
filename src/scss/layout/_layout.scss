@@ -6,7 +6,13 @@ body {
 .wrap {
   margin: 0 auto;
   position: relative;
+  background-color: $dark-color;
 }
+.container-90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
 section {
   margin: 0 auto;
   position: relative;
