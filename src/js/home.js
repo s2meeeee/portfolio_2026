@@ -118,14 +118,16 @@ favoriteMotion.from(
   2,
 );
 
+
+
 // video
 
 gsap
   .timeline({
     scrollTrigger: {
       trigger: ".video",
-      start: "20% 80%",
-      end: "100% 100%",
+      start: "0% 70%",
+      end: "80% 100%",
       scrub: 1,
       markers: true,
     },
@@ -136,4 +138,9 @@ gsap
     { "clip-path": "inset(60% 60% 60% 60% round 30%)" },
     { "clip-path": "inset(0% 0% 0% 0% round 0%)", ease: "none", duration: 10 },
     0,
-  );
+  )
+  .to(
+  ".aboutcircle" ,{width:"2500px",height:"1000px",ease:"none",duration:3},0
+)
+
+  

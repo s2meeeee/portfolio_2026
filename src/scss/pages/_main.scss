@@ -127,7 +127,7 @@
   padding: 10% 10% 10% 0px;
 }
 .about_textBox p {
-  font-size: 4vw;
+  font-size: 70px;
   letter-spacing: -1px;
   font-family: $font-main;
   line-height: 1.2;
@@ -171,7 +171,7 @@
 
 .favoriteText ul li span {
   font-weight: 500;
-  font-size: 7vw;
+  font-size: 130px;
   color: $point-color;
 }
 
@@ -271,11 +271,11 @@
   left: 5%;
 }
 .favoriteItem_l .item:nth-child(4) {
-  bottom: 20%;
+  bottom: 0%;
   left: 25%;
 }
 .favoriteItem_l .item:nth-child(5) {
-  bottom: 25%;
+  bottom: 20%;
   right: 10%;
 }
 
@@ -290,7 +290,7 @@
   left: 25%;
 }
 .favoriteItem_r .item:nth-child(3) {
-  bottom: 15%;
+  bottom: 10%;
   left: 5%;
 }
 .favoriteItem_r .item:nth-child(4) {
@@ -321,8 +321,8 @@
 
 }
 .aboutcircle{
-  width: 2000px;
-  height: 1000px;
+  width: 0px;
+  height: 0px;
   border-radius: 50%;
   background-color: $dark-color;
   top: 0;
@@ -331,7 +331,7 @@
 }
 .abouttext{
   width: 100%;
-  top:25%;
+  top:40%;
   color: #fff;
   text-align: center;
 
@@ -343,7 +343,7 @@
 .videoWrap {
   width: 100%;
   height: 100vh;
-  background-color: $dark-color;
+  background-color:$dark-color;
     position: relative;
 
 }
