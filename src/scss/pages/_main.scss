@@ -343,7 +343,7 @@
 .videoWrap {
   width: 100%;
   height: 100vh;
-  background-color: darkcyan;
+  background-color: $dark-color;
   position: relative;
 }
 
@@ -368,19 +368,143 @@
 ========================= */
 .skill {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 150px 0;
+
   background-color: $dark-color;
 
-  .skillbox {
-    width: 90%;
-    margin: 0 auto;
-    .skill_text {
-      padding-top: 100px;
-      h2 {
-        font-size: 40px;
-        font-family: $font-main;
-        font-weight: 600;
+  .skill_text {
+    width: 100%;
+    padding-bottom: 100px;
+
+    &__title {
+      font-size: 40px;
+      font-family: $font-main;
+      font-weight: 600;
+    }
+
+    &__desc {
+      width: 350px;
+      margin-top: 30px;
+      font-size: 12px;
+      line-height: 20px;
+      color: #cacaca;
+    }
+  }
+
+  .skill_img {
+    width: 100%;
+    // ✅ 리스트 감싸는 영역이니까 중앙 정렬 담당
+    display: flex;
+    justify-content: center;
+  }
+}
+// 카드 리스트(배치)
+.skill__list {
+  width: 1100px;
+  // ✅ absolute 삭제
+  position: relative;
+  transform: none;
+  left: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .skill-card {
+    width: 250px;
+    height: 250px;
+    margin-top: 30px;
+
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    // ✅ 뒤집기(3D)
+    perspective: 1000px;
+
+    &:hover {
+      .skill-card__front {
+        transform: rotateY(-180deg);
       }
+      .skill-card__back {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+}
+
+// 카드 공통(앞/뒤 둘 다 card 클래스 붙어있으니 여기서 공통 처리)
+.skill-card {
+  .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+
+    border-radius: 20px;
+    box-sizing: border-box;
+
+    // ✅ flip 핵심
+    backface-visibility: hidden;
+    transition: transform 0.7s ease;
+  }
+
+  // 앞면
+  &__front {
+    color: #fff;
+    padding: 30px;
+    border: 3px solid #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: rotateY(0deg);
+
+    .skill-card__img {
+      width: 100px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .skill-card__num {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .skill-card__name {
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  // 뒷면
+  &__back {
+    color: $dark-color;
+    background-color: $point-color;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 15%;
+
+    // ✅ 처음엔 뒤로 돌려서 숨김
+    transform: rotateY(180deg);
+
+    .skill-card__title {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: $font-main;
+    }
+
+    .skill-card__text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
     }
   }
 }
