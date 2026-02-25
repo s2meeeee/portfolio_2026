@@ -27,9 +27,11 @@
       &:nth-child(1) {
         animation-delay: 0s;
       }
+
       &:nth-child(2) {
         animation-delay: 3s;
       }
+
       &:nth-child(3) {
         animation-delay: 6s;
       }
@@ -43,18 +45,22 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   10% {
     opacity: 1;
     transform: translateY(0);
   }
+
   30% {
     opacity: 1;
     transform: translateY(0px);
   }
+
   40% {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-30px);
@@ -66,7 +72,7 @@
   width: 100%;
   margin-top: 20px;
 
-  > div {
+  >div {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -98,6 +104,7 @@
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: -2600px 0;
   }
@@ -176,14 +183,17 @@
       &:nth-child(1) span {
         margin-right: auto;
       }
+
       &:nth-child(2) span {
         margin-left: auto;
         margin-right: 20%;
       }
+
       &:nth-child(3) span {
         margin-right: auto;
         margin-left: 20%;
       }
+
       &:nth-child(4) span {
         margin-left: auto;
       }
@@ -224,10 +234,12 @@
     width: 13vw;
     height: 13vw;
   }
+
   .b {
     width: 10vw;
     height: 10vw;
   }
+
   .c {
     width: 7vw;
     height: 7vw;
@@ -251,6 +263,7 @@
 .favoriteItem_l .item:nth-child(3) img {
   width: 45%;
 }
+
 .favoriteItem_r .item:nth-child(3) img {
   width: 80%;
 }
@@ -261,18 +274,22 @@
   top: 0%;
   right: 2%;
 }
+
 .favoriteItem_l .item:nth-child(2) {
   top: 20%;
   left: 40%;
 }
+
 .favoriteItem_l .item:nth-child(3) {
   top: 30%;
   left: 5%;
 }
+
 .favoriteItem_l .item:nth-child(4) {
   bottom: 0%;
   left: 25%;
 }
+
 .favoriteItem_l .item:nth-child(5) {
   bottom: 20%;
   right: 10%;
@@ -283,14 +300,17 @@
   top: -2%;
   right: 30%;
 }
+
 .favoriteItem_r .item:nth-child(2) {
   top: 43%;
   left: 25%;
 }
+
 .favoriteItem_r .item:nth-child(3) {
   bottom: 10%;
   left: 5%;
 }
+
 .favoriteItem_r .item:nth-child(4) {
   top: 30%;
   right: 5%;
@@ -394,15 +414,13 @@
 
   .skill_img {
     width: 100%;
-    // ✅ 리스트 감싸는 영역이니까 중앙 정렬 담당
     display: flex;
     justify-content: center;
   }
 }
-// 카드 리스트(배치)
+
 .skill__list {
   width: 1100px;
-  // ✅ absolute 삭제
   position: relative;
   transform: none;
   left: auto;
@@ -420,13 +438,13 @@
     border-radius: 20px;
     overflow: hidden;
 
-    // ✅ 뒤집기(3D)
     perspective: 1000px;
 
     &:hover {
       .skill-card__front {
         transform: rotateY(-180deg);
       }
+
       .skill-card__back {
         transform: rotateY(0deg);
       }
@@ -434,7 +452,6 @@
   }
 }
 
-// 카드 공통(앞/뒤 둘 다 card 클래스 붙어있으니 여기서 공통 처리)
 .skill-card {
   .card {
     width: 100%;
@@ -445,7 +462,6 @@
     border-radius: 20px;
     box-sizing: border-box;
 
-    // ✅ flip 핵심
     backface-visibility: hidden;
     transition: transform 0.7s ease;
   }
@@ -492,7 +508,6 @@
     text-align: center;
     gap: 15%;
 
-    // ✅ 처음엔 뒤로 돌려서 숨김
     transform: rotateY(180deg);
 
     .skill-card__title {
@@ -508,3 +523,92 @@
     }
   }
 }
+
+/* =========================
+   WORK
+========================= */
+
+.work {
+  background-color: #fff;
+  color: $dark-color;
+
+  .work-wrap {
+    height: auto;
+
+  }
+}
+
+.work-text {
+  width: 100%;
+  padding: 120px 0;
+  text-align: center;
+  font-family: $font-main;
+  letter-spacing: -1px;
+
+
+  &__title {
+    font-size: 90px;
+    font-weight: 600;
+
+  }
+
+  &__subtitle {
+    display: block;
+    margin-top: 20px;
+    font-size: 45px;
+    color: $dark-color;
+    font-weight: 600;
+
+  }
+}
+
+
+.work_content {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  height: auto;
+  display: flex;
+  padding-bottom: 120px;
+
+  .work-left,
+  .work-right {
+    position: relative;
+    width: 50%;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+}
+
+.work-left__item {
+  width: 100%;
+  height: 100%;
+  background-color: #cacaca;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .work-left__img {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+//work_right
+.work-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__item{
+    height: 200px;
+    background-color: $point-color;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+} 
