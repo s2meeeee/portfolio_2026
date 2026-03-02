@@ -1,11 +1,8 @@
 //scss
 import "../scss/style.scss";
 
-
 //js
-import "./header.js"
-
-
+import "./header.js";
 
 // character animation
 gsap.registerPlugin(ScrollTrigger);
@@ -127,8 +124,6 @@ favoriteMotion.from(
   2,
 );
 
-
-
 // video
 
 gsap
@@ -138,7 +133,7 @@ gsap
       start: "0% 70%",
       end: "80% 100%",
       scrub: 1,
-      markers: true,
+      //markers: true,
     },
   })
 
@@ -149,11 +144,49 @@ gsap
     0,
   )
   .to(
-  ".aboutcircle" ,{width:"2500px",height:"1000px",ease:"none",duration:3},0
-)
+    ".aboutcircle",
+    { width: "2500px", height: "1000px", ease: "none", duration: 3 },
+    0,
+  );
 
-  
+// work
 
+function workCircleScrollPin() {
+  const work = document.querySelector(".work");
+  const c1 = document.querySelector(".circle01");
+  const c2 = document.querySelector(".circle02");
+  const c3 = document.querySelector(".circle03");
+  const c4 = document.querySelector(".circle04");
 
+  if (!work || !c1 || !c2 || !c3 || !c4) return;
 
+  // 처음 상태: circle01만 보이게
+  gsap.set([c2, c3, c4], {
+    scale: 0,
+    opacity: 0,
+    transformOrigin: "50% 50%",
+  });
 
+  // pin 구간에서 애니메이션 진행
+  const workTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".work",
+      start: "20% top",
+      end: "+=2000", // ✅ 스크롤 길이(가로스크롤처럼 길게): 숫자 늘리면 더 천천히
+      scrub: 1,
+      pin: true, // ✅ 여기서 멈춘다!
+      anticipatePin: 1,
+      markers: true, // 확인용
+    },
+  });
+
+  // 원들이 순서대로 커지며 나타남
+  workTl
+    .to(c2, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0)
+    .to(c3, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0.2)
+    .to(c4, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0.4);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  workCircleScrollPin();
+});

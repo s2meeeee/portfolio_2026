@@ -1,432 +1,533 @@
 <!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>seonmi_portfolio_2026</title>
+    <script
+      src="https://kit.fontawesome.com/f01502651a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts : Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>seonmi_portfolio_2026</title>
-  <script src="https://kit.fontawesome.com/f01502651a.js" crossorigin="anonymous"></script>
-  <!-- Google Fonts : Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Pretendard -->
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
-</head>
-
-<body class="home-page">
-  <div class="wrap">
-    <header>
-      <div class="container-90">
-        <div class="headerbox">
-          <h1 id="logo">
-            <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
-          </h1>
-          <nav class="main_nav">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="/page/about.html">About</a></li>
-              <li><a href="/page/work.html">Work</a></li>
-              <li><a href="#">Process</a></li>
-            </ul>
-          </nav>
-          <div class="navHamburg">
-            <div class="navHamburg_box">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- 전체 화면 메뉴 -->
-    <nav class="nav nav--full">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Process</a></li>
-      </ul>
-    </nav>
-
-    <section class="main">
-      <div class="main_textBox">
-        <p>
-          U<span class="point">I</span> / U<span class="point">X</span><br /><span class="point">P</span>ublisher
-        </p>
-        <p>
-          <span class="point">D</span>esign <br />
-          <span class="point">D</span>evelopment
-        </p>
-        <p><span class="point">F</span>ront-<span class="point">E</span>nd</p>
-      </div>
-      <div class="main_imgBox">
-        <div class="circle"></div>
-        <div class="character"></div>
-      </div>
-    </section>
-    <section class="about">
-      <div class="aboutcontent">
-        <div class="about_textBox">
-          <p>
-            I am <span class="point">SeonMi Sim</span>,<br />
-            a web publisher who adapts quickly to
-            <span class="point">change</span> and embraces new
-            <span class="point">challenges</span>.
-          </p>
-        </div>
-        <div class="about_imgBox"></div>
-        <div class="about_favorite">
-          <div class="favoriteBox">
-            <div class="favoriteText">
+  <body class="home-page">
+    <div class="wrap">
+      <header>
+        <div class="container-90">
+          <div class="headerbox">
+            <h1 id="logo">
+              <a href="#"><img src="./src/img/main/logoW.svg" alt="Logo" /></a>
+            </h1>
+            <nav class="main_nav">
               <ul>
-                <li><span>What</span></li>
-                <li><span>is My</span></li>
-                <li><span>Favorite</span></li>
-                <li><span>Item?</span></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="/page/about.html">About</a></li>
+                <li><a href="/page/work.html">Work</a></li>
+                <li><a href="#">Process</a></li>
               </ul>
-            </div>
-            <div class="favoriteItem">
-              <div class="favoriteItem_l">
-                <span class="a item" id="l_1"><img src="/src/img/main/about/music_08.png" alt="" /></span>
-                <span class="c item" id="l_2"><img src="/src/img/main/about/Health_03.png" alt="" /></span>
-                <span class="b item" id="l_3"><img src="/src/img/main/about/Interior_04.png" alt="" /></span>
-                <span class="a item" id="l_4"><img src="/src/img/main/about/plants_02.png" alt="" /></span>
-                <span class="c item" id="l_5"><img src="/src/img/main/about/Shopping_10.png" alt="" /></span>
-              </div>
-              <div class="favoriteItem_r">
-                <span class="b item" id="r_1"><img src="/src/img/main/about/Camera_05.png" alt="" /></span>
-                <span class="c item" id="r_2"><img src="/src/img/main/about/coding_06_w.png" alt="" /></span>
-                <span class="b item" id="r_3"><img src="/src/img/main/about/cook_07.png" alt="" /></span>
-                <span class="a item" id="r_4"><img src="/src/img/main/about/pet_09.png" alt="" /></span>
+            </nav>
+            <div class="navHamburg">
+              <div class="navHamburg_box">
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="video">
-      <div class="about_circlebox">
-        <div class="aboutcircle"></div>
-        <div class="abouttext">
+      </header>
+      <!-- 전체 화면 메뉴 -->
+      <nav class="nav nav--full">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Process</a></li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <div class="main_textBox">
+          <p>
+            U<span class="point">I</span> / U<span class="point">X</span
+            ><br /><span class="point">P</span>ublisher
+          </p>
+          <p>
+            <span class="point">D</span>esign <br />
+            <span class="point">D</span>evelopment
+          </p>
+          <p><span class="point">F</span>ront-<span class="point">E</span>nd</p>
         </div>
-      </div>
-      <div class="videoWrap">
-        <div class="videoBox">
-          <video src="./src/img/main/video.mov" autoplay="" muted="" loop="" playinline="" type="video/mp4"></video>
+        <div class="main_imgBox">
+          <div class="circle"></div>
+          <div class="character"></div>
         </div>
-      </div>
-    </section>
-    <section class="skill">
-      <div class="skill__contain container-90">
-        <div class="skill_text">
-          <h4 class="skill_text__title">Software Skills</h2>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section class="about">
+        <div class="aboutcontent">
+          <div class="about_textBox">
+            <p>
+              I am <span class="point">SeonMi Sim</span>,<br />
+              a web publisher who adapts quickly to
+              <span class="point">change</span> and embraces new
+              <span class="point">challenges</span>.
+            </p>
+          </div>
+          <div class="about_imgBox"></div>
+          <div class="about_favorite">
+            <div class="favoriteBox">
+              <div class="favoriteText">
+                <ul>
+                  <li><span>What</span></li>
+                  <li><span>is My</span></li>
+                  <li><span>Favorite</span></li>
+                  <li><span>Item?</span></li>
+                </ul>
+              </div>
+              <div class="favoriteItem">
+                <div class="favoriteItem_l">
+                  <span class="a item" id="l_1"
+                    ><img src="/src/img/main/about/music_08.png" alt=""
+                  /></span>
+                  <span class="c item" id="l_2"
+                    ><img src="/src/img/main/about/Health_03.png" alt=""
+                  /></span>
+                  <span class="b item" id="l_3"
+                    ><img src="/src/img/main/about/Interior_04.png" alt=""
+                  /></span>
+                  <span class="a item" id="l_4"
+                    ><img src="/src/img/main/about/plants_02.png" alt=""
+                  /></span>
+                  <span class="c item" id="l_5"
+                    ><img src="/src/img/main/about/Shopping_10.png" alt=""
+                  /></span>
+                </div>
+                <div class="favoriteItem_r">
+                  <span class="b item" id="r_1"
+                    ><img src="/src/img/main/about/Camera_05.png" alt=""
+                  /></span>
+                  <span class="c item" id="r_2"
+                    ><img src="/src/img/main/about/coding_06_w.png" alt=""
+                  /></span>
+                  <span class="b item" id="r_3"
+                    ><img src="/src/img/main/about/cook_07.png" alt=""
+                  /></span>
+                  <span class="a item" id="r_4"
+                    ><img src="/src/img/main/about/pet_09.png" alt=""
+                  /></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDEO -->
+
+      <section class="video">
+        <div class="about_circlebox">
+          <div class="aboutcircle"></div>
+          <div class="abouttext"></div>
+        </div>
+        <div class="videoWrap">
+          <div class="videoBox">
+            <video
+              src="./src/img/main/video.mov"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILL -->
+
+      <section class="skill">
+        <div class="skill__contain container-90">
+          <div class="skill_text">
+            <h4 class="skill_text__title">Software Skills</h4>
             <p class="skill_text__desc">
               Photoshop, Illustrator, Figma를 활용한 디자인 작업은 물론
               프론트엔드의 필요한 HTML, CSS, JavaScript, SCSS, Vite, GitHub툴을
               사용하여 실제 구현까지 완성합니다.
             </p>
-        </div>
-        <div class="skill_img">
-          <ul class="skill__list">
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">01</span>
-                <img src="./src/img/main/skill/html.png" alt="HTML" class="skill-card__img" />
-                <p class="skill-card__name">HTML</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Advanced ”</span>
-                <p class="skill-card__text">
-                  웹 표준을 준수하여 구조를 설계하고, 시맨틱 태그를 활용해
-                  마크업을 작성할 수 있습니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">02</span>
-                <img src="./src/img/main/skill/scss.png" alt="css" class="skill-card__img" />
-                <p class="skill-card__name">SCSS</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Advanced ”</span>
-                <p class="skill-card__text">
-                  변수, 믹스인, 중첩 문법을 사용하고 효율적인 스타일 코드를
-                  작성할 수 있습니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">03</span>
-                <img src="./src/img/main/skill/js.png" alt="Figma" class="skill-card__img" />
-                <p class="skill-card__name">JQuery</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Intermediate ”</span>
-                <p class="skill-card__text">
-                  jQuery를 활용하여 인터랙션과 간단한 애니메이션을 구현할 수
-                  있습니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">04</span>
-                <img src="./src/img/main/skill/js.png" alt="JavaScript" class="skill-card__img" />
-                <p class="skill-card__name">JavaScript</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Beginner ”</span>
-                <p class="skill-card__text">
-                  js를 활용한 동적인 인터랙션 구현이 가능하며 기본문법을
-                  이해하고 있습니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">05</span>
-                <img src="./src/img/main/skill/figma.png" alt="Figma" class="skill-card__img" />
-                <p class="skill-card__name">Figma</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Intermediate ”</span>
-                <p class="skill-card__text">
-                  기본적인 디자인툴과 인터랙션 원리를 이해하고 피그마를
-                  효과적으로 사용할 수 있습니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">06</span>
-                <img src="./src/img/main/skill/photoshop.png" alt="photoshop" class="skill-card__img" />
-                <p class="skill-card__name">Photoshop</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Advanced ”</span>
-                <p class="skill-card__text">
-                  photoshop의 새로운 기능을 빠르게 이해하며 툴 사용에 어려움
-                  없이 모든 기술을 사용합니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">07</span>
-                <img src="./src/img/main/skill/illustration.png" alt="illustration" class="skill-card__img" />
-                <p class="skill-card__name">Illustration</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Advanced ”</span>
-                <p class="skill-card__text">
-                  Illustrator의 다양한 기능을 이해하고 활용하여 디자인을
-                  효과적으로 표현하고 구현합니다.
-                </p>
-              </div>
-            </li>
-            <li class="skill-card">
-              <div class="skill-card__front card">
-                <span class="skill-card__num">08</span>
-                <img src="./src/img/main/skill/github.png" alt="github" class="skill-card__img" />
-                <p class="skill-card__name">GitHub</p>
-              </div>
-
-              <div class="skill-card__back card">
-                <span class="skill-card__title">“ Intermediate ”</span>
-                <p class="skill-card__text">
-                  GitHub의 기능을 이해하고 활용하여 효율적인 협업과 버전
-                  관리를 수행할 수 있습니다.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="work">
-      <div class="work-wrap container-90">
-        <div class="work-text">
-          <h2 class="work-text__title">Work</h2>
-          <span class="work-text__subtitle">Publishing & Design & Web</span>
-        </div>
-        <div class="work_content">
-          <div class="work-left">
-            <div class="work-left__item">
-              <div class="work-left__img">
-                <img src="./src/img/main/work/Publishing.jpg" alt="">
-              </div>
-              <div class="work-left__txtbox">
-                <div class="left__text">
-                  <h3>Web Publishing</h3>
-                  <p>LG OLED / 원치과의원</p>
-                </div>
-                <a class="arrow">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="work-left__item">
-              <div class="work-left__img">
-                <img src="./src/img/main/work/Publishing.jpg" alt="">
-              </div>
-              <div class="work-left__txtbox">
-                <div class="left__text">
-                  <h3>Web Publishing</h3>
-                  <p>LG OLED / 원치과의원</p>
-                </div>
-                <a class="arrow">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-            <div class="work-left__item">
-              <div class="work-left__img">
-                <img src="./src/img/main/work/Publishing.jpg" alt="">
-              </div>
-              <div class="work-left__txtbox">
-                <div class="left__text">
-                  <h3>Web Publishing</h3>
-                  <p>LG OLED / 원치과의원</p>
-                </div>
-                <button class="arrow">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-            <div class="work-left__item">
-              <div class="work-left__img">
-                <img src="./src/img/main/work/Publishing.jpg" alt="">
-              </div>
-              <div class="work-left__txtbox">
-                <div class="left__text">
-                  <h3>Web Publishing</h3>
-                  <p>LG OLED / 원치과의원</p>
-                </div>
-                <a class="arrow">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
           </div>
-          <div class="work-right">
-            <div class="work-right__item">
-              <div class="right__text">
-                <h3>ART</h3>
-              </div>
-              <div class="right__img">
-                <img src="./src/img/main/work/readMore3.png" alt="">
-              </div>
-            </div>
-            <div class="work-right__item">
-              <div class="right__text">
-                <h3>ART</h3>
-              </div>
-              <div class="right__img">
-                <img src="./src/img/main/work/readMore3.png" alt="">
-              </div>
-            </div>
-            <div class="work-right__item">
-              <div class="right__text">
-                <h3>ART</h3>
-              </div>
-              <div class="right__img">
-                <img src="./src/img/main/work/readMore3.png" alt="">
-              </div>
-            </div>
-            <div class="work-right__item">
-              <div class="right__text">
-                <h3>ART</h3>
-              </div>
-              <div class="right__img">
-                <img src="./src/img/main/work/readMore3.png" alt="">
-              </div>
-            </div>
+          <div class="skill_img">
+            <ul class="skill__list">
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">01</span>
+                  <img
+                    src="./src/img/main/skill/html.png"
+                    alt="HTML"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">HTML</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Advanced ”</span>
+                  <p class="skill-card__text">
+                    웹 표준을 준수하여 구조를 설계하고, 시맨틱 태그를 활용해
+                    마크업을 작성할 수 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">02</span>
+                  <img
+                    src="./src/img/main/skill/scss.png"
+                    alt="css"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">SCSS</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Advanced ”</span>
+                  <p class="skill-card__text">
+                    변수, 믹스인, 중첩 문법을 사용하고 효율적인 스타일 코드를
+                    작성할 수 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">03</span>
+                  <img
+                    src="./src/img/main/skill/js.png"
+                    alt="Figma"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">JQuery</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Intermediate ”</span>
+                  <p class="skill-card__text">
+                    jQuery를 활용하여 인터랙션과 간단한 애니메이션을 구현할 수
+                    있습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">04</span>
+                  <img
+                    src="./src/img/main/skill/js.png"
+                    alt="JavaScript"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">JavaScript</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Beginner ”</span>
+                  <p class="skill-card__text">
+                    js를 활용한 동적인 인터랙션 구현이 가능하며 기본문법을
+                    이해하고 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">05</span>
+                  <img
+                    src="./src/img/main/skill/figma.png"
+                    alt="Figma"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">Figma</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Intermediate ”</span>
+                  <p class="skill-card__text">
+                    기본적인 디자인툴과 인터랙션 원리를 이해하고 피그마를
+                    효과적으로 사용할 수 있습니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">06</span>
+                  <img
+                    src="./src/img/main/skill/photoshop.png"
+                    alt="photoshop"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">Photoshop</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Advanced ”</span>
+                  <p class="skill-card__text">
+                    photoshop의 새로운 기능을 빠르게 이해하며 툴 사용에 어려움
+                    없이 모든 기술을 사용합니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">07</span>
+                  <img
+                    src="./src/img/main/skill/illustration.png"
+                    alt="illustration"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">Illustration</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Advanced ”</span>
+                  <p class="skill-card__text">
+                    Illustrator의 다양한 기능을 이해하고 활용하여 디자인을
+                    효과적으로 표현하고 구현합니다.
+                  </p>
+                </div>
+              </li>
+              <li class="skill-card">
+                <div class="skill-card__front card">
+                  <span class="skill-card__num">08</span>
+                  <img
+                    src="./src/img/main/skill/github.png"
+                    alt="github"
+                    class="skill-card__img"
+                  />
+                  <p class="skill-card__name">GitHub</p>
+                </div>
+
+                <div class="skill-card__back card">
+                  <span class="skill-card__title">“ Intermediate ”</span>
+                  <p class="skill-card__text">
+                    GitHub의 기능을 이해하고 활용하여 효율적인 협업과 버전
+                    관리를 수행할 수 있습니다.
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="contact">
-      <div class="contact__wrap container-90">
+      </section>
 
-        <div class="contact__title">
-          <h2>Contact me</h2>
-        </div>
+      <!-- WORK -->
 
-        <div class="contact__content">
+      <section class="work">
+        <div class="work__wrap container-90">
+          <div class="work__titlebox">
+            <h2 class="work__title">Work</h2>
+            <span class="work__subtitle">Publishing & Design & Web</span>
+          </div>
 
-          <div class="contact__left">
-            <div class="contact-intro">
-              <p class="contact-intro__desc">If you have a project in mind,<br/>
-                feel free to reach out anytime.</p>
-              <span class="contact-intro__title">2026 portfolio</span>
-              
+          <div class="work__content">
+            <div class="content_wrap">
+              <div class="work__circle circle04">
+                <div class="work__circlebox">
+                  <ul class="work__list">
+                    <li class="work__item">
+                      <div class="work__item-titlebox">
+                        <h3 class="work__circle-title">Personal work</h3>
+                        <a class="work__view-btn" href="#"
+                          ><i class="fa-solid fa-arrow-down"></i
+                        ></a>
+                      </div>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">marshall</h3>
+                      <p class="work__item-desc">사이트 리디자인 및 퍼블리싱</p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">market B</h3>
+                      <p class="work__item-desc">사이트 리디자인 및 퍼블리싱</p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">PAWINHAND</h3>
+                      <p class="work__item-desc">사이트 리디자인</p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">sns디자인</h3>
+                      <p class="work__item-desc">인스타 홍보용 디자인 제작</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="work__circle circle03">
+                <div class="work__circlebox">
+                  <ul class="work__list">
+                    <li class="work__item">
+                      <div class="work__item-titlebox">
+                        <h3 class="work__circle-title">Design</h3>
+                        <a class="work__view-btn" href="#"
+                          ><i class="fa-solid fa-arrow-down"></i
+                        ></a>
+                      </div>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">LOTTET</h3>
+                      <p class="work__item-desc">롯데홈쇼핑 이커머스 디자인</p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">ONE 치과의원</h3>
+                      <p class="work__item-desc">
+                        페이지 리뉴얼작업 및 썸네일작업
+                      </p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">드림플랫폼</h3>
+                      <p class="work__item-desc">
+                        랜딩페이지 및 배너 디자인 제작
+                      </p>
+                    </li>
+                    <li class="work__item">
+                      <h3 class="work__item-title">펭귄상회</h3>
+                      <p class="work__item-desc">랜딩페이지 디자인 제작</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="work__circle circle02">
+                <div class="work__circlebox">
+                  <ul class="work__list">
+                    <li class="work__item">
+                      <div class="work__item-titlebox">
+                        <h3 class="work__circle-title">Publishing</h3>
+                        <a class="work__view-btn" href="#"
+                          ><i class="fa-solid fa-arrow-down"></i
+                        ></a>
+                      </div>
+                    </li>
+                    <li class="work__item">
+                      <h4 class="work__item-title">ONE 치과의원</h4>
+                      <p class="work__item-desc">
+                        홈페이지 유지보수 및 페이지 추가작업
+                      </p>
+                    </li>
+                    <li class="work__item">
+                      <h4 class="work__item-title">LG OLED</h4>
+                      <p class="work__item-desc">LG OLED 다국어 자막 확산</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="work__circle circle01"></div>
             </div>
-            <div class="contact-social">
-              <ul class="contact-social__list">
-                <li class="contact-social__item">
-                  <a class="contact-social__link" href="깃허브링크" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-square-github" aria-hidden="true"></i>
-                    <span class="sr-only">GitHub</span>
-                  </a>
-                </li>
+          </div>
+        </div>
+      </section>
 
-                <li class="contact-social__item">
-                  <a class="contact-social__link" href="인스타링크" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                    <span class="sr-only">Instagram</span>
-                  </a>
-                </li>
+      <!-- CONTACT -->
 
-                <li class="contact-social__item">
-                  <a class="contact-social__link" href="" target="_blank" rel="noopener">
-                    <img src="./src/img/main/contact/green favicon.png" alt="velog" />
-                    <span class="sr-only">velog</span>
-                  </a>
+      <section class="contact">
+        <div class="contact__wrap container-90">
+          <div class="contact__title">
+            <h2>Contact me</h2>
+          </div>
+
+          <div class="contact__content">
+            <div class="contact__left">
+              <div class="contact-intro">
+                <p class="contact-intro__desc">
+                  If you have a project in mind,<br />
+                  feel free to reach out anytime.
+                </p>
+                <span class="contact-intro__title">2026 portfolio</span>
+              </div>
+              <div class="contact-social">
+                <ul class="contact-social__list">
+                  <li class="contact-social__item">
+                    <a
+                      class="contact-social__link"
+                      href="깃허브링크"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i
+                        class="fa-brands fa-square-github"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="sr-only">GitHub</span>
+                    </a>
+                  </li>
+
+                  <li class="contact-social__item">
+                    <a
+                      class="contact-social__link"
+                      href="인스타링크"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                      <span class="sr-only">Instagram</span>
+                    </a>
+                  </li>
+
+                  <li class="contact-social__item">
+                    <a
+                      class="contact-social__link"
+                      href=""
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <img
+                        src="./src/img/main/contact/green favicon.png"
+                        alt="velog"
+                      />
+                      <span class="sr-only">velog</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="contact__right">
+              <ul class="contact__list">
+                <li class="contact__item">
+                  <a href="mailto:s2m9730@gmail.com"
+                    ><i class="fa-solid fa-envelope"></i>s2m9730@gmail.com</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a href="tel:01053115234"
+                    ><i class="fa-solid fa-phone"></i>+82 10-5311-5234</a
+                  >
+                </li>
+                <li class="contact__item">
+                  <a href="#"
+                    ><i class="fa-solid fa-comment"></i>kakao ID : tjsal1699</a
+                  >
                 </li>
               </ul>
             </div>
           </div>
-
-          <div class="contact__right">
-            <ul class="contact__list">
-              <li class="contact__item">
-                <a href="mailto:s2m9730@gmail.com"><i class="fa-solid fa-envelope"></i>s2m9730@gmail.com</a>
-              </li>
-              <li class="contact__item">
-                
-                <a href="tel:01053115234"><i class="fa-solid fa-phone"></i>+82 10-5311-5234</a>
-              </li>
-              <li class="contact__item">
-                
-                <a href="#"><i class="fa-solid fa-comment"></i>kakao ID : tjsal1699</a>
-              </li>
-            </ul>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
+    <!-- script plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 
-  </div>
-  <!-- script plugin -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
-
-  <!-- script -->
-  <script type="module" src="/src/js/main.js"></script>
-</body>
-
+    <!-- script -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
 </html>

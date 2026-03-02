@@ -5,6 +5,7 @@ body {
 
 .wrap {
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
   background-color: $dark-color;
 }
@@ -18,7 +19,6 @@ section {
   position: relative;
   box-sizing: border-box;
 }
-
 
 .point {
   color: $point-color;
