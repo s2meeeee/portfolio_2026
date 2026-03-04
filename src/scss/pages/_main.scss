@@ -673,6 +673,35 @@
         transform: rotate(-140deg);
       }
     }
+
+    .work__circle.circle01{
+  position: absolute;  // 너 기존 그대로
+  // width/height/background는 nth-child로 이미 들어가있음
+}
+
+.work__circle.circle01 > .work__page-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 150px;
+  height: 150px;
+  border: 10px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 24px;
+  color: #fff;
+
+  i{ transform: rotate(-90deg); }
+}
   }
 
   /* =========================
