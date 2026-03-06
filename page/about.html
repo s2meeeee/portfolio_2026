@@ -5,10 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- Google Fonts : Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Pretendard -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
+
 </head>
 
-<body>
-  <div class="about__wrap">
+<body class="about-page">
+  <div class="about__wrap  container-90">
     <header>
       <div class="container-90">
         <div class="headerbox">
@@ -17,7 +26,7 @@
           </h1>
           <nav class="main_nav">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="/index.html">Home</a></li>
               <li><a href="/page/about.html">About</a></li>
               <li><a href="/page/work.html">Work</a></li>
               <li><a href="#">Process</a></li>
@@ -36,11 +45,11 @@
 
     <!-- about  -->
     <div class="about__timeline">
-      <div class="about__timeline-text">
+      <div class="about__timeline-text text_r">
         <span>hollow</span>
       </div>
       <div class="about__timeline-img">
-        <ul class="about__imgbox">
+        <ul class="timeline-imgbox">
           <li class="img1 upBox"><img src="../src/img/about/timeline01.jpg" alt=""></li>
           <li class="img2 upBox"><img src="../src/img/about/timeline02.jpg" alt=""></li>
           <li class="img3 upBox"><img src="../src/img/about/timeline03.jpg" alt=""></li>
@@ -49,23 +58,23 @@
           <li class="img6 upBox"><img src="../src/img/about/timeline06.jpg" alt=""></li>
         </ul>
       </div>
-      <div class="about__timeline-text">
-        <span>im seonme</span>
+      <div class="about__timeline-text text_l">
+        <span>im seonmi</span>
       </div>
     </div>
 
     <div class="about__title">
       <p class="title-en">
-        My favorite phrase is “a life like a tangerine.”
-        Just as tangerines become sweeter with stimulation,
+        My favorite phrase is <span class="point">“a life like a tangerine.”</span><br />
+        Just as tangerines become sweeter with stimulation,<br />
         I grow through new experiences and learning.
       </p>
       <p class="title-kr">
-        제가 좋아하는 말은 ‘귤 같은 인생’ 입니다. 자극을 받을수록 더 달아지는 귤처럼, 저도 새로운 경험과 배움 속에서 성장합니다.
+        제가 좋아하는 말은 ‘귤 같은 인생’ 입니다. <br />자극을 받을수록 더 달아지는 귤처럼, 저도 새로운 경험과 배움 속에서 성장합니다.
       </p>
     </div>
 
-    <div class="about__contant">
+    <div class="about__content">
       <div class="svgAni">
         <svg width="440" height="1223" viewBox="0 0 440 1223" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_95_14)">
@@ -82,6 +91,110 @@
             </clipPath>
           </defs> -->
         </svg>
+      </div>
+      <div class="about__list">
+
+        <div class="about__list-box">
+          <h5 class="about__list-title">Experience</h5>
+          <ul class="about__list-items">
+            <li class="about__list-item">
+              <span class="about__date">25.08 ~ </span>
+              <p class="about__text">
+                (주)아웃스프링 <span class="about__role">| 디자이너 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">25.02 ~ 25.07</span>
+              <p class="about__text">
+                (주)원치과의원 <span class="about__role">| 퍼블리셔 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">22.02 ~ 26</span>
+              <p class="about__text">
+                (주)케이어트랙션 <span class="about__role">| 직원 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">20.02 ~ 21.04</span>
+              <p class="about__text">
+                (주)드림플랫폼 <span class="about__role">| 디자이너 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">14.03 ~ 17.07</span>
+              <p class="about__text">
+                (주)모다이노칩 <span class="about__role">| QC |</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__list-box">
+          <h5 class="about__list-title">license</h5>
+          <ul class="about__list-items">
+            <li class="about__list-item">
+              <span class="about__date">21.09 </span>
+              <p class="about__text">
+                웹 디자인 기능사
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">21.10 </span>
+              <p class="about__text">
+                컴퓨터 그래픽스 기능사
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__list-box">
+          <h5 class="about__list-title">project</h5>
+          <ul class="about__list-items">
+            <li class="about__list-item">
+              <span class="about__date">24.08 ~ </span>
+              <p class="about__text">
+                롯데홈쇼핑<span class="about__role">| 이커머스 디자인 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">24.06 ~ 09</span>
+              <p class="about__text">
+                (주)우신<span class="about__role">| 사이트 랜딩페이지 제작 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">23.09 ~ 11 </span>
+              <p class="about__text">
+                LG OLED<span class="about__role">|  번역 확산 |</span>
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">23.05 ~ 10 </span>
+              <p class="about__text">
+                펭귄상회<span class="about__role">| 상품 랜딩페이지 제작 |</span>
+              </p>
+            </li>ㅍ
+          </ul>
+        </div>
+
+        <div class="about__list-box">
+          <h5 class="about__list-title">tool</h5>
+          <ul class="about__list-items">
+            <li class="about__list-item">
+              <p class="about__text">
+                pr
+              </p>
+            </li>
+            <li class="about__list-item">
+              <span class="about__date">21.10 </span>
+              <p class="about__text">
+                컴퓨터 그래픽스 기능사
+              </p>
+            </li>
+          </ul>
+        </div>
+
 
 
       </div>
@@ -93,7 +206,7 @@
 
 
   <!-- script -->
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="../src/js/main.js"></script>
 </body>
 
 </html>
