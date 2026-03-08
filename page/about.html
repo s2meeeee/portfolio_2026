@@ -1,212 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
-  <!-- Google Fonts : Montserrat -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Pretendard -->
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
-
-</head>
-
-<body class="about-page">
-  <div class="about__wrap  container-90">
-    <header>
-      <div class="container-90">
-        <div class="headerbox">
-          <h1 id="logo">
-            <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
-          </h1>
-          <nav class="main_nav">
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/page/about.html">About</a></li>
-              <li><a href="/page/work.html">Work</a></li>
-              <li><a href="#">Process</a></li>
-            </ul>
-          </nav>
-          <div class="navHamburg">
-            <div class="navHamburg_box">
-              <span></span>
-              <span></span>
-              <span></span>
+    <!-- Google Fonts : Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"
+    />
+  </head>
+  <body class="about-page">
+    <div class="about container-90">
+      <header class="header">
+        <div class="container-90">
+          <div class="headerbox">
+            <h1 id="logo">
+              <a href="#"><img src="./src/img/main/logoW.svg" alt="" /></a>
+            </h1>
+            <nav class="main_nav">
+              <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/page/about.html">About</a></li>
+                <li><a href="/page/work.html">Work</a></li>
+                <li><a href="#">Process</a></li>
+              </ul>
+            </nav>
+            <div class="navHamburg">
+              <div class="navHamburg_box">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!-- about  -->
-    <div class="about__timeline">
-      <div class="about__timeline-text text_r">
-        <span>hollow</span>
-      </div>
-      <div class="about__timeline-img">
-        <ul class="timeline-imgbox">
-          <li class="img1 upBox"><img src="../src/img/about/timeline01.jpg" alt=""></li>
-          <li class="img2 upBox"><img src="../src/img/about/timeline02.jpg" alt=""></li>
-          <li class="img3 upBox"><img src="../src/img/about/timeline03.jpg" alt=""></li>
-          <li class="img4 upBox"><img src="../src/img/about/timeline04.jpg" alt=""></li>
-          <li class="img5 upBox"><img src="../src/img/about/timeline05.jpg" alt=""></li>
-          <li class="img6 upBox"><img src="../src/img/about/timeline06.jpg" alt=""></li>
-        </ul>
-      </div>
-      <div class="about__timeline-text text_l">
-        <span>im seonmi</span>
-      </div>
+      <section class="about__timeline">
+        <div class="about__timeline-text about__timeline-text--right">
+          <span>hollow</span>
+        </div>
+
+        <div class="about__timeline-image">
+          <ul class="about__timeline-list">
+            <li class="about__timeline-item about__timeline-item--1 upBox">
+              <img src="../src/img/about/timeline01.jpg" alt="" />
+            </li>
+            <li class="about__timeline-item about__timeline-item--2 upBox">
+              <img src="../src/img/about/timeline02.jpg" alt="" />
+            </li>
+            <li class="about__timeline-item about__timeline-item--3 upBox">
+              <img src="../src/img/about/timeline03.jpg" alt="" />
+            </li>
+            <li class="about__timeline-item about__timeline-item--4 upBox">
+              <img src="../src/img/about/timeline04.jpg" alt="" />
+            </li>
+            <li class="about__timeline-item about__timeline-item--5 upBox">
+              <img src="../src/img/about/timeline05.jpg" alt="" />
+            </li>
+            <li class="about__timeline-item about__timeline-item--6 upBox">
+              <img src="../src/img/about/timeline06.jpg" alt="" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="about__timeline-text about__timeline-text--left">
+          <span>im seonmi</span>
+        </div>
+      </section>
+
+      <section class="about__intro">
+        <div class="about__intro-title">
+          <p class="about__intro-en">
+            My favorite phrase is
+            <span class="point">“a life like a tangerine.”</span><br />
+            Just as tangerines become sweeter with stimulation,<br />
+            I grow through new experiences and learning.
+          </p>
+          <p class="about__intro-kr">
+            제가 좋아하는 말은 ‘귤 같은 인생’ 입니다. <br />
+            자극을 받을수록 더 달아지는 귤처럼, 저도 새로운 경험과 배움 속에서
+            성장합니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="about__content">
+        <div class="about__line">
+          <svg
+            width="440"
+            height="1223"
+            viewBox="0 0 440 1223"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_95_14)">
+              <path
+                id="svgAni01"
+                d="M223.461 1185.84C226.677 1194.13 231.177 1221.34 231.177 1221.34C238.954 1217.05 257.855 1209 271.245 1211.04"
+                stroke="#9bcb4f"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                id="svgAni02"
+                d="M180.211 4C141.918 27.5601 78.2182 96.8799 129.764 185.678C194.196 296.676 378.501 145.858 412.465 162.782C446.43 179.705 402.975 209.072 397.481 192.647C391.987 176.221 448.427 162.782 432.444 210.566C416.461 258.35 42.8548 224.005 6.39324 346.451C-30.0683 468.897 138.254 457.449 146.745 395.23C155.236 333.012 36.3614 386.271 79.3162 481.341C122.271 576.411 278.107 412.652 397.481 428.58C516.855 444.508 353.526 668.992 241.645 628.675C129.764 588.357 -44.0538 638.63 45.8514 771.031C135.757 903.432 396.981 759.085 417.959 720.26C438.937 681.436 334.547 648.087 378.501 794.425C422.455 940.763 309.574 1101.54 255.131 1109C200.688 1116.47 192.697 1018.91 260.126 1038.82C314.069 1054.75 263.289 1166.24 231.156 1220"
+                stroke="#9bcb4f"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="about__cards">
+          <div class="about__card-row">
+            <article class="about__card about__card--experience">
+              <div class="about__card-inner">
+                <h5 class="about__card-title">Experience</h5>
+                <ul class="about__card-list">
+                  <li class="about__card-item">
+                    <span class="about__card-date">25.08 ~</span>
+                    <p class="about__card-text">(주)아웃스프링</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">25.02 ~ 25.07</span>
+                    <p class="about__card-text">(주)원치과의원</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">22.02 ~ 22.06</span>
+                    <p class="about__card-text">(주)케이어트랙션</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">20.02 ~ 21.04</span>
+                    <p class="about__card-text">(주)드림플랫폼</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">14.03 ~ 17.07</span>
+                    <p class="about__card-text">(주)모다이노칩</p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="about__card-row">
+            <article class="about__card about__card--license">
+              <div class="about__card-inner">
+                <h5 class="about__card-title">License</h5>
+                <ul class="about__card-list">
+                  <li class="about__card-item">
+                    <span class="about__card-date">21.09</span>
+                    <p class="about__card-text">웹 디자인 기능사</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">21.10</span>
+                    <p class="about__card-text">컴퓨터 그래픽스 기능사</p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="about__card-row">
+            <article class="about__card about__card--project">
+              <div class="about__card-inner">
+                <h5 class="about__card-title">Project</h5>
+                <ul class="about__card-list">
+                  <li class="about__card-item">
+                    <span class="about__card-date">24.08 ~</span>
+                    <p class="about__card-text">롯데홈쇼핑</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">24.06 ~ 09</span>
+                    <p class="about__card-text">(주)우신</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">23.09 ~ 11</span>
+                    <p class="about__card-text">LG OLED</p>
+                  </li>
+                  <li class="about__card-item">
+                    <span class="about__card-date">23.05 ~ 10</span>
+                    <p class="about__card-text">펭귄상회</p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="about__card-row">
+            <article class="about__card about__card--tool">
+              <div class="about__card-inner">
+                <h5 class="about__card-title">Tool</h5>
+                <ul class="about__card-list">
+                  <li class="about__card-item">
+                    <p class="about__card-text">Ps / Ai / Figma</p>
+                  </li>
+                  <li class="about__card-item">
+                    <p class="about__card-text">
+                      HTML / CSS / SCSS / JS / Vite / Git
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="about__card-row">
+            <article class="about__card about__card--personality">
+              <div class="about__card-inner">
+                <h5 class="about__card-title">Personality</h5>
+                <ul class="about__card-list">
+                  <li class="about__card-item">
+                    <p class="about__card-text">책임감 / 성실함 / 꾸준함</p>
+                  </li>
+                  <li class="about__card-item">
+                    <p class="about__card-text">협업 / 적응력 / 집중력</p>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__scrolling"></section>
     </div>
 
-    <div class="about__title">
-      <p class="title-en">
-        My favorite phrase is <span class="point">“a life like a tangerine.”</span><br />
-        Just as tangerines become sweeter with stimulation,<br />
-        I grow through new experiences and learning.
-      </p>
-      <p class="title-kr">
-        제가 좋아하는 말은 ‘귤 같은 인생’ 입니다. <br />자극을 받을수록 더 달아지는 귤처럼, 저도 새로운 경험과 배움 속에서 성장합니다.
-      </p>
-    </div>
-
-    <div class="about__content">
-      <div class="svgAni">
-        <svg width="440" height="1223" viewBox="0 0 440 1223" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_95_14)">
-            <path
-              d="M223.461 1185.84C226.677 1194.13 231.177 1221.34 231.177 1221.34C238.954 1217.05 257.855 1209 271.245 1211.04"
-              stroke="black" stroke-width="2" stroke-linecap="round" />
-            <path
-              d="M180.211 4C141.918 27.5601 78.2182 96.8799 129.764 185.678C194.196 296.676 378.501 145.858 412.465 162.782C446.43 179.705 402.975 209.072 397.481 192.647C391.987 176.221 448.427 162.782 432.444 210.566C416.461 258.35 42.8548 224.005 6.39324 346.451C-30.0683 468.897 138.254 457.449 146.745 395.23C155.236 333.012 36.3614 386.271 79.3162 481.341C122.271 576.411 278.107 412.652 397.481 428.58C516.855 444.508 353.526 668.992 241.645 628.675C129.764 588.357 -44.0538 638.63 45.8514 771.031C135.757 903.432 396.981 759.085 417.959 720.26C438.937 681.436 334.547 648.087 378.501 794.425C422.455 940.763 309.574 1101.54 255.131 1109C200.688 1116.47 192.697 1018.91 260.126 1038.82C314.069 1054.75 263.289 1166.24 231.156 1220"
-              stroke="black" stroke-width="2" stroke-linecap="round" />
-          </g>
-          <!-- <defs>
-            <clipPath id="clip0_95_14">
-              <rect width="440" height="1223" fill="white" />
-            </clipPath>
-          </defs> -->
-        </svg>
-      </div>
-      <div class="about__list">
-
-        <div class="about__list-box">
-          <h5 class="about__list-title">Experience</h5>
-          <ul class="about__list-items">
-            <li class="about__list-item">
-              <span class="about__date">25.08 ~ </span>
-              <p class="about__text">
-                (주)아웃스프링 <span class="about__role">| 디자이너 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">25.02 ~ 25.07</span>
-              <p class="about__text">
-                (주)원치과의원 <span class="about__role">| 퍼블리셔 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">22.02 ~ 26</span>
-              <p class="about__text">
-                (주)케이어트랙션 <span class="about__role">| 직원 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">20.02 ~ 21.04</span>
-              <p class="about__text">
-                (주)드림플랫폼 <span class="about__role">| 디자이너 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">14.03 ~ 17.07</span>
-              <p class="about__text">
-                (주)모다이노칩 <span class="about__role">| QC |</span>
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="about__list-box">
-          <h5 class="about__list-title">license</h5>
-          <ul class="about__list-items">
-            <li class="about__list-item">
-              <span class="about__date">21.09 </span>
-              <p class="about__text">
-                웹 디자인 기능사
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">21.10 </span>
-              <p class="about__text">
-                컴퓨터 그래픽스 기능사
-              </p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="about__list-box">
-          <h5 class="about__list-title">project</h5>
-          <ul class="about__list-items">
-            <li class="about__list-item">
-              <span class="about__date">24.08 ~ </span>
-              <p class="about__text">
-                롯데홈쇼핑<span class="about__role">| 이커머스 디자인 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">24.06 ~ 09</span>
-              <p class="about__text">
-                (주)우신<span class="about__role">| 사이트 랜딩페이지 제작 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">23.09 ~ 11 </span>
-              <p class="about__text">
-                LG OLED<span class="about__role">|  번역 확산 |</span>
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">23.05 ~ 10 </span>
-              <p class="about__text">
-                펭귄상회<span class="about__role">| 상품 랜딩페이지 제작 |</span>
-              </p>
-            </li>ㅍ
-          </ul>
-        </div>
-
-        <div class="about__list-box">
-          <h5 class="about__list-title">tool</h5>
-          <ul class="about__list-items">
-            <li class="about__list-item">
-              <p class="about__text">
-                pr
-              </p>
-            </li>
-            <li class="about__list-item">
-              <span class="about__date">21.10 </span>
-              <p class="about__text">
-                컴퓨터 그래픽스 기능사
-              </p>
-            </li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-  <!-- script -->
-  <script type="module" src="../src/js/main.js"></script>
-</body>
-
+    <script type="module" src="../src/js/main.js"></script>
+  </body>
 </html>
