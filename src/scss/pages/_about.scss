@@ -1,193 +1,272 @@
 .about {
-  width: 100%;
-  height: auto;
-  position: relative;
-  color: $dark-color;
-  letter-spacing: -1px;
+   width: 100%;
+   height: auto;
+   position: relative;
+   color: $dark-color;
+   letter-spacing: -1px;
 
-  // timeline
-  .about__timeline {
-    height: 90vh;
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+   // timeline
+   .about__timeline {
+      height: 90vh;
+      margin-top: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
 
-  .about__timeline-text {
-    width: 35%;
-    color: $point-color;
-    font-size: 5vw;
-    font-family: $font-main;
-    font-weight: bolder;
-    text-transform: uppercase;
+   .about__timeline-text {
+      width: 35%;
+      color: $point-color;
+      font-size: 5vw;
+      font-family: $font-main;
+      font-weight: bolder;
+      text-transform: uppercase;
 
-    &--right {
-      text-align: right;
-    }
+      &--right {
+         text-align: right;
+      }
 
-    &--left {
-      text-align: left;
-    }
-  }
+      &--left {
+         text-align: left;
+      }
+   }
 
-  .about__timeline-image {
-    position: relative;
-  }
+   .about__timeline-image {
+      position: relative;
+   }
 
-  .about__timeline-item {
-    width: 300px;
-    height: auto;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-radius: 20px;
-    overflow: hidden;
-    opacity: 1;
-
-    > img {
-      width: 100%;
-      display: block;
-    }
-
-    &--1 {
-      transform: translate(-50%, -50%) rotate(5deg);
-    }
-
-    &--2 {
-      transform: translate(-50%, -50%) rotate(-5deg);
-    }
-
-    &--3 {
-      transform: translate(-50%, -50%) rotate(8deg);
-    }
-
-    &--4 {
-      transform: translate(-50%, -50%) rotate(-8deg);
-    }
-
-    &--5 {
-      transform: translate(-50%, -50%) rotate(3deg);
-    }
-
-    &--6 {
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  // intro
-  .about__intro {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 5;
-    background-color: #fff;
-  }
-
-  .about__intro-en {
-    font-size: 30px;
-    line-height: 1.3;
-    font-weight: 500;
-    font-family: $font-main;
-  }
-
-  .about__intro-kr {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #a4a4a4;
-  }
-
-  // content
-  .about__content {
-    width: 100%;
-    min-height: 1200px;
-    margin: 150px auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-
-  .about__line,
-  .about__cards {
-    width: 40%;
-    position: absolute;
-  }
-
-  .about__line {
-    > svg {
-      width: 100%;
-      max-width: 440px;
+   .about__timeline-item {
+      width: 300px;
       height: auto;
-      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 20px;
+      overflow: hidden;
+      opacity: 1;
+
+      >img {
+         width: 100%;
+         display: block;
+      }
+
+      &--1 {
+         transform: translate(-50%, -50%) rotate(5deg);
+      }
+
+      &--2 {
+         transform: translate(-50%, -50%) rotate(-5deg);
+      }
+
+      &--3 {
+         transform: translate(-50%, -50%) rotate(8deg);
+      }
+
+      &--4 {
+         transform: translate(-50%, -50%) rotate(-8deg);
+      }
+
+      &--5 {
+         transform: translate(-50%, -50%) rotate(3deg);
+      }
+
+      &--6 {
+         transform: translate(-50%, -50%);
+      }
+   }
+
+
+
+   // intro
+   .about__intro {
+      width: 100%;
       margin: 0 auto;
-    }
-  }
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      background-color: #fff;
+   }
 
-  .about__cards {
-    margin-top: 50px;
-  }
+   .about__intro-en {
+      font-size: 30px;
+      line-height: 1.3;
+      font-weight: 500;
+      font-family: $font-main;
+   }
 
-  .about__card-row {
-    width: 100%;
-  }
+   .about__intro-kr {
+      padding-top: 20px;
+      padding-bottom: 50px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #a4a4a4;
+   }
 
-  .about__card {
-    width: 220px;
-    height: 220px;
-    margin-left: 0;
-    border-radius: 20px;
-    background-color: #fafafa;
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .about__card-inner {
-    width: 80%;
-    height: 80%;
-  }
 
-  .about__card-title {
-    font-weight: 600;
-    text-align: center;
-    font-family: $font-main;
-    color: $point-color;
-    font-size: 18px;
-    padding-bottom: 25px;
-  }
 
-  .about__card-list {
-  }
+   // content
+   .about__content {
+      width: 100%;
+      min-height: 1200px;
+      margin: 100px auto 40px auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+   }
 
-  .about__card-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
+   .about__line,
+   .about__cards {
+      width: 40%;
+      position: absolute;
+   }
 
-  .about__card-date {
-    font-size: 12px;
-    margin-right: 10px;
-    color: #c0c0c0;
-  }
+   .about__line {
+      >svg {
+         width: 100%;
+         max-width: 440px;
+         height: auto;
+         display: block;
+         margin: 0 auto;
+      }
+   }
 
-  .about__card-text {
-    font-size: 14px;
-    color: #585858;
-  }
+   .about__cards {
+      margin-top: 50px;
+   }
 
-  .about__card--experience,
-  .about__card--project,
-  .about__card--personality {
-    margin-left: auto;
-  }
+   .about__card-row {
+      width: 100%;
+   }
 
-  .about__scrolling {
-    width: 100%;
-    height: 100vh;
-  }
+   .about__card {
+      width: 220px;
+      height: 220px;
+      margin-left: 0;
+      border-radius: 20px;
+      background-color: #fafafa;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .about__card-inner {
+      width: 80%;
+      height: 80%;
+   }
+
+   .about__card-title {
+      font-weight: 600;
+      text-align: center;
+      font-family: $font-main;
+      color: $point-color;
+      font-size: 18px;
+      padding-bottom: 25px;
+   }
+
+
+   .about__card-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+   }
+
+   .about__card-date {
+      font-size: 12px;
+      margin-right: 10px;
+      color: #c0c0c0;
+   }
+
+   .about__card-text {
+      font-size: 14px;
+      color: #585858;
+   }
+
+   .about__card--experience,
+   .about__card--project,
+   .about__card--personality {
+      margin-left: auto;
+   }
+
+
+
+
+
+
+
+   .about__textloop {
+      width: 100%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+   }
+
+   .about__textloop-line {
+      width: 120%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+
+      .track {
+         display: flex;
+         width: max-content;
+         animation: textLoop 12s linear infinite;
+      }
+
+      .track.reverse {
+         animation: textLoopReverse 12s linear infinite;
+      }
+
+      ul {
+         display: flex;
+         flex-shrink: 0;
+         white-space: nowrap;
+         font-size: 70px;
+         letter-spacing: -2px;
+         padding: 10px 0;
+      }
+
+      li {
+         padding: 0 24px;
+      }
+   }
+
+   .line-a {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(7deg);
+
+      border-top: 1px solid $point-color;
+      border-bottom: 1px solid $point-color;
+      color: $point-color;
+   }
+
+   .line-b {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-7deg);
+      background-color: $point-color;
+   }
+
+   @keyframes textLoop {
+      0% {
+         transform: translateX(0);
+      }
+
+      100% {
+         transform: translateX(-50%);
+      }
+   }
+
+   @keyframes textLoopReverse {
+      0% {
+         transform: translateX(-50%);
+      }
+
+      100% {
+         transform: translateX(0);
+      }
+   }
 }
