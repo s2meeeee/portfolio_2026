@@ -80,11 +80,11 @@
    // intro
    .about__intro {
       width: 100%;
-      margin: 0 auto;
+      margin: 0 auto 100px auto;
       text-align: center;
       position: relative;
       z-index: 5;
-      background-color: #fff;
+      //background-color: #fff;
    }
 
    .about__intro-en {
@@ -107,16 +107,18 @@
    // content
    .about__content {
       width: 100%;
-      min-height: 1200px;
-      margin: 100px auto 40px auto;
+      height: 1400px;
+      //background-color: $dark-color;
+      padding-top: 150px ;
       position: relative;
       display: flex;
       justify-content: center;
+
    }
 
    .about__line,
    .about__cards {
-      width: 40%;
+      width: 60%;
       position: absolute;
    }
 
@@ -131,19 +133,18 @@
    }
 
    .about__cards {
-      margin-top: 50px;
+      margin-top: 80px;
    }
 
    .about__card-row {
       width: 100%;
+      margin-bottom: 20px;
    }
 
    .about__card {
-      width: 220px;
-      height: 220px;
-      margin-left: 0;
+      width: 300px;
+      padding: 30px;
       border-radius: 20px;
-      background-color: #fafafa;
       overflow: hidden;
       box-sizing: border-box;
       display: flex;
@@ -152,13 +153,12 @@
    }
 
    .about__card-inner {
-      width: 80%;
-      height: 80%;
+      width: 100%;
+      width: 100%;
    }
 
    .about__card-title {
-      font-weight: 600;
-      text-align: center;
+      text-align: start;
       font-family: $font-main;
       color: $point-color;
       font-size: 18px;
@@ -170,18 +170,19 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
+      color:  #bcbcbc;
+;
+;
+      font-size: 12px;
+
    }
 
    .about__card-date {
       font-size: 12px;
-      margin-right: 10px;
-      color: #c0c0c0;
+      color:#bcbcbc;
    }
 
-   .about__card-text {
-      font-size: 14px;
-      color: #585858;
-   }
+
 
    .about__card--experience,
    .about__card--project,
@@ -189,17 +190,33 @@
       margin-left: auto;
    }
 
+   .about__tag-group{
+      display: flex;
+      flex-wrap: wrap;
+      
+      
+   }
+   .about__tag{
+      text-align: center;
+      padding:5px 10px;
+      border: 1px solid #a4a4a4;
+      border-radius: 50px;
+      margin: 0px 10px 10px 0;
+      
+   }
 
 
 
 
 
+// textloop animation
 
    .about__textloop {
       width: 100%;
       height: 400px;
       position: relative;
       overflow: hidden;
+      background-color: $dark-color;
    }
 
    .about__textloop-line {

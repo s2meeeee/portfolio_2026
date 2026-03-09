@@ -45,6 +45,28 @@ export function initAbout() {
     },
   );
 
+  // about__content 배경색변경
+
+  const colorChange = {
+    trigger:".about__content",
+      start:"top 70%",
+      end:"30% 50%",
+      scrub:true,
+      markers:true,
+  }
+
+  gsap.to(".about", {
+  backgroundColor: "#0b0b0b",
+  scrollTrigger: colorChange,
+})
+
+gsap.to(".about__intro",{
+  color:"#fff",
+  scrollTrigger: colorChange,
+});
+
+  
+
   //svg 애니메이션
   const path01 = document.querySelector("#svgAni01");
   const path02 = document.querySelector("#svgAni02");
@@ -71,7 +93,7 @@ export function initAbout() {
       start: "top 50%",
       end: "80% 80%",
       scrub: 2,
-      markers: true,
+      //markers: true,
     },
   });
 
@@ -87,4 +109,26 @@ export function initAbout() {
       //markers: true,
     },
   });
+
+  const rows = gsap.utils.toArray(".about__card-row");
+
+  rows.forEach((row, index) => {
+    gsap.fromTo(row, {
+      y:80,
+      opacity:0,
+    },{
+      y: 0,
+      opacity: 1,
+      duration:1,
+      ease: 'power3.out',
+      delay: index * 0.15,
+      scrollTrigger: {
+        trigger: row,
+        start: "top 85%",
+        toggleActions: "play reverse play reverse",  
+        //markers: true,
+      }
+    });
+  });
 }
+
