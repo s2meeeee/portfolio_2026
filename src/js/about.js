@@ -9,22 +9,42 @@ export function initAbout() {
   const upBox = document.querySelectorAll(".upBox");
 
   const aboutTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".about__timeline",
-      pin: true,
-      scrub: 1,
-      start: "top top",
-      end: "+=600%",
-      //markers: true,
-    },
-  });
+  scrollTrigger: {
+    trigger: ".about__timeline",
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "+=450%",
+    // markers: true,
+  },
+});
 
-  aboutTl.from(upBox, {
-    y: "400%",
-    ease: "none",
-    stagger: 0.6,
-    opacity: 0,
-  });
+// 1. 텍스트 먼저 등장
+aboutTl
+  .fromTo(
+    ".text--right",
+    { x: "-100%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 1, ease: "none" }
+  )
+  .fromTo(
+    ".text--left",
+    { x: "100%", opacity: 0 },
+    { x: "0%", opacity: 1, duration: 1, ease: "none" },
+    "<" // 같은 타이밍에 같이 시작
+  )
+
+  // 2. 텍스트가 다 나온 뒤 이미지 등장
+  .from(
+    ".upBox",
+    {
+      y: "400%",
+      opacity: 0,
+      stagger: 0.4,
+      duration: 1,
+      ease: "none",
+    },
+    "+=0.1" // 텍스트 끝나고 조금 뒤
+  );
 
   gsap.fromTo(
     ".about__intro-title",
@@ -49,7 +69,7 @@ export function initAbout() {
 
   const colorChange = {
     trigger:".about__content",
-      start:"top 70%",
+      start:"top bottom",
       end:"30% 50%",
       scrub:true,
       markers:true,
@@ -131,4 +151,5 @@ gsap.to(".about__intro",{
     });
   });
 }
+
 

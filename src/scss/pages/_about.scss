@@ -1,3 +1,6 @@
+@use "../base/variables" as *;
+
+
 .about {
    width: 100%;
    height: auto;
@@ -7,43 +10,42 @@
 
    // timeline
    .about__timeline {
-      height: 90vh;
-      margin-top: 100px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    width: 100%;
+    height: 100vh;
+
    }
 
    .about__timeline-text {
-      width: 35%;
-      color: $point-color;
-      font-size: 5vw;
+      width: 100%;
+      height: 100vh;
+      font-size: 120px;
+      line-height: 1;
+      text-align: center;
+      padding-top: 30vh;
+      box-sizing: border-box;
       font-family: $font-main;
       font-weight: bolder;
-      text-transform: uppercase;
+      color: $point-color;
 
-      &--right {
-         text-align: right;
-      }
-
-      &--left {
-         text-align: left;
-      }
    }
 
    .about__timeline-image {
-      position: relative;
+      width: 70%;
+      margin: 0 auto;
+   }
+   .about__timeline-list{
+      width: 100%;
+      height: 100%;
    }
 
    .about__timeline-item {
       width: 300px;
-      height: auto;
+      // height: auto;
       position: absolute;
       left: 50%;
       top: 50%;
       border-radius: 20px;
       overflow: hidden;
-      opacity: 1;
 
       >img {
          width: 100%;
@@ -80,7 +82,7 @@
    // intro
    .about__intro {
       width: 100%;
-      margin: 0 auto 100px auto;
+      margin: -50px auto 100px auto;
       text-align: center;
       position: relative;
       z-index: 5;

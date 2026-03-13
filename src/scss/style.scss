@@ -1,17 +1,17 @@
 /* 1) 변수 */
-@import "./base/variables";
+@use "./base/variables" as *;
 
 /* 2) 리셋/기본 */
-@import "./base/reset";
+@use "./base/reset";
 
 /* 3) 전체 레이아웃(=wrap, inner, container 같은 뼈대) */
-@import "./layout/layout";
+@use "./layout/layout";
 
 /* 4) 컴포넌트 */
-@import "./components/header";
+@use "./components/header";
 
 /* 5) 페이지 */
-@import "./pages/main";
-@import "./pages/about";
-@import "./pages/work";
+@use "./pages/main";
+@use "./pages/about";
+@use "./pages/work";
 
