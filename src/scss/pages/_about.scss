@@ -288,4 +288,98 @@
          transform: translateX(0);
       }
    }
+
+
+   // about links
+   .about__links{
+      height: 100vh;
+      padding-top: 150px;
+      background-color: $dark-color;
+      border-radius: 0px 0px 50px 50px;
+   }
+
+   .about__links-list{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+
+   }
+   .about__links-item{
+      padding: 30px;
+      border-radius: 30px;
+
+
+      background-color: #fff;
+   }
+   .about__links-card{
+      color: $dark-color;
+   }
+   .about__links-thumb{
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      border: 3px solid #ececec;
+      box-sizing: border-box;
+      overflow: hidden;
+      background-image: url(/src/img/about/velog.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      > img{
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   .about__links-text{
+      
+      width: 300px;
+      padding-top: 15px;
+            letter-spacing:1px;
+
+   }
+   .about__links-sub{
+      color: #a4a4a4;
+      font-size: 14px;
+      letter-spacing:1px;
+   }
+
+   .about__links-titlebox{
+      margin-top: 20px;
+   }
+
+      .about__links-title{
+      font-size:25px;
+      font-weight: 600;
+
+      }
+      .about__links-subtext{
+         font-size: 16px;
+         padding-top: 10px;
+         color: #a4a4a4;
+         line-height: 1.2;
+      }
+
+   .about__links-btn{
+      width: 120px;
+      height: 32px;
+      background-color: #eaeaea;
+      border-radius: 50px;
+      border:none;
+      margin-top: 20px;
+
+
+      > i{
+         width: 100%;
+        line-height: 45px;
+        text-align: center;
+        align-items: center;
+        font-size: 15px;
+        transform: rotate(-140deg);
+      }
+   }
+
+  
+
 }
