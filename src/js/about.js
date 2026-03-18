@@ -150,6 +150,29 @@ gsap.to(".about__intro",{
       }
     });
   });
+
+
+
+  gsap.fromTo(
+  ".about__link",
+  {
+    y: 100,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power3.out",
+    stagger: 0.2, // ⭐ 하나씩 올라오는 핵심
+    scrollTrigger: {
+      trigger: ".about__links",
+      start: "top 70%",
+      toggleActions: "play none none none",
+      // markers: true,
+    },
+  }
+);
 }
 
 
