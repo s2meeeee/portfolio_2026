@@ -1,21 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/f01502651a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f01502651a.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Fonts : Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Pretendard -->
-    <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css"
+    />
+  </head>
+  <body class="work-page">
+    <div class="work container-90">
+      <header class="header">
+        <div class="container-90">
+          <div class="headerbox">
+            <h1 id="logo">
+              <a href="#"><img src="/src/img/main/logoB.svg" alt="Logo" /></a>
+            </h1>
 
-</head>
-<body>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/page/about.html">About</a></li>
+                <li><a href="/page/work.html">Work</a></li>
+                <li><a href="#">Process</a></li>
+              </ul>
+            </nav>
+
+            <button class="navHamburg" type="button" aria-label="Open menu">
+              <span class="navHamburg_box">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <nav class="nav--full">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/page/about.html">About</a></li>
+          <li><a href="/page/work.html">Work</a></li>
+          <li><a href="#">Process</a></li>
+        </ul>
+      </nav>
+
+      <!-- work title -->
+      <section class="work__main">
+        <div class="work__main-title">
+          <p><span>My</span></p>
+          <p><span>Project</span></p>
+        </div>
+        <nav class="work__main-anchor">
+          <ul>
+            <li><a href="#publishing">Publishing</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#others">Others</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- publishing -->
+      <section class="work__con01"></section>
+    </div>
+
     <script type="module" src="../src/js/main.js"></script>
-</body>
+  </body>
 </html>
