@@ -72,7 +72,7 @@ aboutTl
       start:"top bottom",
       end:"30% 50%",
       scrub:true,
-      markers:true,
+      //markers:true,
   }
 
   gsap.to(".about", {
@@ -167,9 +167,11 @@ gsap.to(".about__intro",{
     stagger: 0.2, // ⭐ 하나씩 올라오는 핵심
     scrollTrigger: {
       trigger: ".about__links",
-      start: "top 70%",
+      start: "top 100%",
+      end:"50% 50%",
       toggleActions: "play none none none",
-      // markers: true,
+      scrub:1,
+      markers: true,
     },
   }
 );
