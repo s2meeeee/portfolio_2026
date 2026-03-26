@@ -9,42 +9,42 @@ export function initAbout() {
   const upBox = document.querySelectorAll(".upBox");
 
   const aboutTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".about__timeline",
-    pin: true,
-    scrub: 1,
-    start: "top top",
-    end: "+=450%",
-    // markers: true,
-  },
-});
-
-// 1. 텍스트 먼저 등장
-aboutTl
-  .fromTo(
-    ".text--right",
-    { x: "-100%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 1, ease: "none" }
-  )
-  .fromTo(
-    ".text--left",
-    { x: "100%", opacity: 0 },
-    { x: "0%", opacity: 1, duration: 1, ease: "none" },
-    "<" // 같은 타이밍에 같이 시작
-  )
-
-  // 2. 텍스트가 다 나온 뒤 이미지 등장
-  .from(
-    ".upBox",
-    {
-      y: "400%",
-      opacity: 0,
-      stagger: 0.4,
-      duration: 1,
-      ease: "none",
+    scrollTrigger: {
+      trigger: ".about__timeline",
+      pin: true,
+      scrub: 1,
+      start: "top top",
+      end: "+=450%",
+      // markers: true,
     },
-    "+=0.1" // 텍스트 끝나고 조금 뒤
-  );
+  });
+
+  // 1. 텍스트 먼저 등장
+  aboutTl
+    .fromTo(
+      ".text--right",
+      { x: "-100%", opacity: 0 },
+      { x: "0%", opacity: 1, duration: 1, ease: "none" }
+    )
+    .fromTo(
+      ".text--left",
+      { x: "100%", opacity: 0 },
+      { x: "0%", opacity: 1, duration: 1, ease: "none" },
+      "<" // 같은 타이밍에 같이 시작
+    )
+
+    // 2. 텍스트가 다 나온 뒤 이미지 등장
+    .from(
+      ".upBox",
+      {
+        y: "400%",
+        opacity: 0,
+        stagger: 0.4,
+        duration: 1,
+        ease: "none",
+      },
+      "+=0.1" // 텍스트 끝나고 조금 뒤
+    );
 
   gsap.fromTo(
     ".about__intro-title",
@@ -68,24 +68,24 @@ aboutTl
   // about__content 배경색변경
 
   const colorChange = {
-    trigger:".about__content",
-      start:"top bottom",
-      end:"30% 50%",
-      scrub:true,
-      //markers:true,
+    trigger: ".about__content",
+    start: "top bottom",
+    end: "30% 50%",
+    scrub: true,
+    //markers:true,
   }
 
   gsap.to(".about", {
-  backgroundColor: "#0b0b0b",
-  scrollTrigger: colorChange,
-})
+    backgroundColor: "#0b0b0b",
+    scrollTrigger: colorChange,
+  })
 
-gsap.to(".about__intro",{
-  color:"#fff",
-  scrollTrigger: colorChange,
-});
+  gsap.to(".about__intro", {
+    color: "#fff",
+    scrollTrigger: colorChange,
+  });
 
-  
+
 
   //svg 애니메이션
   const path01 = document.querySelector("#svgAni01");
@@ -134,18 +134,18 @@ gsap.to(".about__intro",{
 
   rows.forEach((row, index) => {
     gsap.fromTo(row, {
-      y:80,
-      opacity:0,
-    },{
+      y: 80,
+      opacity: 0,
+    }, {
       y: 0,
       opacity: 1,
-      duration:1,
+      duration: 1,
       ease: 'power3.out',
       delay: index * 0.15,
       scrollTrigger: {
         trigger: row,
         start: "top 85%",
-        toggleActions: "play reverse play reverse",  
+        toggleActions: "play reverse play reverse",
         //markers: true,
       }
     });
@@ -154,27 +154,27 @@ gsap.to(".about__intro",{
 
 
   gsap.fromTo(
-  ".about__link",
-  {
-    y: 100,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.2, // ⭐ 하나씩 올라오는 핵심
-    scrollTrigger: {
-      trigger: ".about__links",
-      start: "top 100%",
-      end:"50% 50%",
-      toggleActions: "play none none none",
-      scrub:1,
-      markers: true,
+    ".about__link",
+    {
+      y: 100,
+      opacity: 0,
     },
-  }
-);
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power3.out",
+      stagger: 0.2, // ⭐ 하나씩 올라오는 핵심
+      scrollTrigger: {
+        trigger: ".about__links",
+        start: "top 100%",
+        end: "50% 50%",
+        toggleActions: "play none none none",
+        scrub: 1,
+        markers: true,
+      },
+    }
+  );
 }
 
 

@@ -4,6 +4,12 @@
   /* =========================
    MAIN
 ========================= */
+.header__nav{
+  >ul>li>a{
+    color: #fff;
+  }
+  
+}
   .main {
     width: 100%;
     height: 100vh;
@@ -677,8 +683,8 @@
     }
 
     .work__circle.circle01{
-  position: absolute;  // 너 기존 그대로
-  // width/height/background는 nth-child로 이미 들어가있음
+  position: absolute; 
+  
 }
 
 .work__circle.circle01 > .work__page-btn{
