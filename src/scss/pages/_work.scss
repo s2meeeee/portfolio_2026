@@ -54,12 +54,132 @@
       background-color: $point-color;
     }
   }
+  
 
+  // =====================
+  // publishing
+  // =====================
+
+.work-publishing {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.work-publishing__inner {
+  position: relative;
+  height: 600px;
+}
+
+/* -----------------
+   text
+----------------- */
+.work-publishing__texts {
+  position: absolute;
+  inset: 0;
+}
+
+.work-publishing__text {
+  position: absolute;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: $point-color;
+}
+
+.work-publishing__text--left {
+  left: 0;
+  top: 40px;
+}
+
+.work-publishing__text--right {
+  right: 0;
+  bottom: 10px;
+}
+
+.work-publishing__title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.work-publishing__title {
+  font-size: 24px;
+  color: #fff;
+}
+
+.work-publishing__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  flex-shrink: 0;
+
+  > i {
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    transform: rotate(-140deg);
+  }
+}
+
+.work-publishing__desc {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #3b3b3b;
+}
+
+/* -----------------
+   images
+----------------- */
+.work-publishing__images {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-publishing__image-card {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.work-publishing__image-card--right {
+  transform: translateX(10px) rotate(-5deg);
+  z-index: 2;
+  border: 2px solid #000;
+}
+
+.work-publishing__image-card--left {
+  transform: translateX(-10px) rotate(5deg);
+  z-index: 1;
+}
+
+.work-publishing__image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.work-publishing__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  // =====================
   // design
+  // =====================
 
   .work__design {
     width: 100%;
     height: 100vh;
+    margin-top: 120px;
 
   }
 
@@ -134,7 +254,7 @@
 
   .work__other-warp {
     display: flex;
-    width: 60%;
+    width: 50vw;
     height: 500px;
     margin: 0 auto;
 
@@ -205,9 +325,9 @@
   }
 
 
-  // =====================
+
   // hover / active
-  // =====================
+
 
   .work__other-item:hover .work__other-bar,
   .work__other-item.is-active .work__other-bar {
@@ -222,9 +342,9 @@
 
 
 
-  // =====================
+
   // right media
-  // =====================
+
 
   .work__other-media {
     width: 60%;
@@ -258,20 +378,24 @@
   // image
 
   .work__other-img a {
-    display: block;
+    display: flex;
     width: 100%;
     height: 100%;
     position: relative;
+    justify-content: end;
+    align-items: center;
   }
 
   .work__other-img img {
     width: 450px;
+    height: auto;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
 
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+
+    // transform: translate(-50%, -50%);
     border-radius: 20px;
   }
 
