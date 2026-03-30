@@ -1,19 +1,31 @@
 const header = document.querySelector("header");
 
-window.addEventListener("scroll", () => {
-  // 현재 스크롤값 확인용 (문제 해결되면 지워도 됨)
-  // console.log(window.scrollY);
-
+const updateHeaderScroll = () => {
   if (window.scrollY === 0) {
     header.classList.remove("scrolled");
   } else if (window.scrollY > 50) {
     header.classList.add("scrolled");
   } else {
-    // 1~50 구간에서는 너 취향대로:
-    // 맨 위처럼 보이게 하고 싶으면 remove
     header.classList.remove("scrolled");
   }
-});
+};
 
-// 새로고침 했을 때도 상태 맞추기
-window.dispatchEvent(new Event("scroll"));
+const mediaQuery = window.matchMedia("(min-width: 751px)");
+
+const handleResize = (event) => {
+  if (event.matches) {
+    window.addEventListener("scroll", updateHeaderScroll);
+    updateHeaderScroll();
+  } else {
+    window.removeEventListener("scroll", updateHeaderScroll);
+    header.classList.remove("scrolled");
+  }
+};
+
+if (typeof mediaQuery.addEventListener === "function") {
+  mediaQuery.addEventListener("change", handleResize);
+} else if (typeof mediaQuery.addListener === "function") {
+  mediaQuery.addListener(handleResize);
+}
+
+handleResize(mediaQuery);

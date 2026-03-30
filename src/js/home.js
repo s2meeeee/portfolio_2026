@@ -4,34 +4,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function initHome() {
   if (!document.body.classList.contains("home-page")) return;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".main",
-            start: "top top",
-            end: "bottom 30%",
-            scrub: 1,
-        },
-    });
+      const media = gsap.matchMedia();
+        media.add("(min-width: 1201px)", () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".main",
+                    start: "top top",
+                    end: "bottom 30%",
+                    scrub: 1,
+                },
+            });
 
-    // 캐릭터 이동
-    tl.to(".character", {
-        y: 550,
-        x: 450,
-        scale: 1.3,
-        duration: 0.3,
-        ease: "none",
-    });
+            // 캐릭터 이동
+            tl.to(".character", {
+                y: 550,
+                x: 450,
+                scale: 1.3,
+                duration: 0.3,
+                ease: "none",
+            });
 
-    tl.to(
-        ".circle",
-        {
-            scale: 0,
-            opacity: 0,
-            duration: 0.2,
-            ease: "none",
-        },
-        0,
-    );
+            tl.to(
+                ".circle",
+                {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.2,
+                    ease: "none",
+                },
+                0,
+            );
+
+            return () => tl.kill();
+        });
 
     // about text animation
 
