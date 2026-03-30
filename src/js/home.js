@@ -16,7 +16,7 @@ export function initHome() {
             });
 
             // 캐릭터 이동
-            tl.to(".character", {
+            tl.to(".main__character", {
                 y: 550,
                 x: 450,
                 scale: 1.3,
@@ -25,7 +25,7 @@ export function initHome() {
             });
 
             tl.to(
-                ".circle",
+                ".main__circle",
                 {
                     scale: 0,
                     opacity: 0,
@@ -40,13 +40,13 @@ export function initHome() {
 
     // about text animation
 
-    gsap.set(".about_textBox p", { opacity: 0, y: -40 });
+    gsap.set(".about__text-box p", { opacity: 0, y: -40 });
 
     ScrollTrigger.create({
         trigger: ".about",
         start: "top 50%",
         onEnter: () => {
-            gsap.to(".about_textBox p", {
+            gsap.to(".about__text-box p", {
                 opacity: 1,
                 y: 0,
                 duration: 2,
@@ -54,7 +54,7 @@ export function initHome() {
             });
         },
         onLeaveBack: () => {
-            gsap.to(".about_textBox p", {
+            gsap.to(".about__text-box p", {
                 opacity: 0,
                 y: -40,
                 duration: 0.8,
@@ -63,7 +63,7 @@ export function initHome() {
         },
         onRefresh(self) {
             if (self.progress === 1) {
-                gsap.set(".about_textBox p", { opacity: 1, y: 0 });
+                gsap.set(".about__text-box p", { opacity: 1, y: 0 });
             }
         },
     });
@@ -71,7 +71,7 @@ export function initHome() {
 
     const favoriteMotion = gsap.timeline({
         scrollTrigger: {
-            trigger: ".aboutcontent",
+            trigger: ".about__content",
             start: "20% 50%",
             end: "100% 0%",
             scrub: 1,
@@ -79,49 +79,49 @@ export function initHome() {
     });
 
     favoriteMotion.from(
-        ".favoriteItem_l #l_1",
+        ".about-favorite__col--left #l_1",
         { x: "20", y: "-120", rotate: 40, ease: "bounce.out", duration: 8 },
         2,
     );
     favoriteMotion.from(
-        ".favoriteItem_l #l_2",
+        ".about-favorite__col--left #l_2",
         { x: "40", y: "-120", rotate: -20, ease: "bounce.out", duration: 8 },
         1,
     );
     favoriteMotion.from(
-        ".favoriteItem_l #l_3",
+        ".about-favorite__col--left #l_3",
         { x: "-20", y: "120", rotate: -40, ease: "bounce.out", duration: 8 },
         1,
     );
     favoriteMotion.from(
-        ".favoriteItem_l #l_4",
+        ".about-favorite__col--left #l_4",
         { x: "-40", y: "120", rotate: 10, ease: "bounce.out", duration: 8 },
         2,
     );
     favoriteMotion.from(
-        ".favoriteItem_l #l_5",
+        ".about-favorite__col--left #l_5",
         { x: "20", y: "120", rotate: 60, ease: "bounce.out", duration: 8 },
         3,
     );
 
     // right item
     favoriteMotion.from(
-        ".favoriteItem_r #r_1",
+        ".about-favorite__col--right #r_1",
         { x: "30", y: "-120", rotate: -20, ease: "bounce.out", duration: 8 },
         1,
     );
     favoriteMotion.from(
-        ".favoriteItem_r #r_2",
+        ".about-favorite__col--right #r_2",
         { x: "20", y: "100", rotate: 60, ease: "bounce.out", duration: 8 },
         2,
     );
     favoriteMotion.from(
-        ".favoriteItem_r #r_3",
+        ".about-favorite__col--right #r_3",
         { x: "-20", y: "120", rotate: -40, ease: "bounce.out", duration: 8 },
         3,
     );
     favoriteMotion.from(
-        ".favoriteItem_r #r_4",
+        ".about-favorite__col--right #r_4",
         { x: "100", rotate: -80, ease: "bounce.out", duration: 8 },
         2,
     );
@@ -140,59 +140,66 @@ export function initHome() {
         })
 
         .fromTo(
-            ".videoWrap .videoBox",
+            ".video__wrap .video__box",
             { "clip-path": "inset(60% 60% 60% 60% round 30%)" },
             { "clip-path": "inset(0% 0% 0% 0% round 0%)", ease: "none", duration: 10 },
             0,
         )
         .to(
-            ".aboutcircle",
+            ".video__intro-circle",
             { width: "2500px", height: "1000px", ease: "none", duration: 3 },
             0,
         );
 
+   
     // work
 
-    function workCircleScrollPin() {
-        const work = document.querySelector(".work");
-        const c1 = document.querySelector(".circle01");
-        const c2 = document.querySelector(".circle02");
-        const c3 = document.querySelector(".circle03");
-        const c4 = document.querySelector(".circle04");
+    let activeImage = null;
 
-        if (!work || !c1 || !c2 || !c3 || !c4) return;
+    gsap.utils.toArray(".work__item").forEach((item) => {
+        const trigger = item.querySelector(".work__text") || item;
+        const image = item.querySelector(".work__img");
 
-        // 처음 상태: circle01만 보이게
-        gsap.set([c2, c3, c4], {
-            scale: 0,
-            opacity: 0,
-            transformOrigin: "50% 50%",
+        if (!image) return;
+
+        let setX;
+        let setY;
+
+        const align = (e) => {
+            if (!setX || !setY) return;
+            setX(e.clientX + 20);
+            setY(e.clientY + 20);
+        };
+
+        const startPoint = () => document.addEventListener("mousemove", align);
+        const stopPoint = () => document.removeEventListener("mousemove", align);
+        const fade = gsap.to(image, {
+            autoAlpha: 0.85,
+            ease: "none",
+            paused: true,
         });
 
-        // pin 구간에서 애니메이션 진행
-        const workTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".work",
-                start: "20% top",
-                end: "+=2000", // ✅ 스크롤 길이(가로스크롤처럼 길게): 숫자 늘리면 더 천천히
-                scrub: 1,
-                pin: true, // ✅ 여기서 멈춘다!
-                anticipatePin: 1,
-                // markers: true, // 확인용
-            },
+        trigger.addEventListener("mouseenter", (e) => {
+            if (activeImage && activeImage !== image) {
+                gsap.set(image, {
+                    x: gsap.getProperty(activeImage, "x"),
+                    y: gsap.getProperty(activeImage, "y"),
+                });
+            }
+
+            setX = gsap.quickTo(image, "x", { duration: 0.4, ease: "power3.out" });
+            setY = gsap.quickTo(image, "y", { duration: 0.4, ease: "power3.out" });
+            activeImage = image;
+
+            fade.play();
+            startPoint();
+            align(e);
         });
 
-        // 원들이 순서대로 커지며 나타남
-        workTl
-            .to(c2, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0)
-            .to(c3, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0.2)
-            .to(c4, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0.4);
-    }
-
-    window.addEventListener("DOMContentLoaded", () => {
-        workCircleScrollPin();
+        trigger.addEventListener("mouseleave", () => {
+            stopPoint();
+            fade.reverse();
+        });
     });
 
 }
-
-

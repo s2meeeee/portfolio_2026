@@ -56,7 +56,7 @@
 
       <nav class="nav--full">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="/index.html">Home</a></li>
           <li><a href="/page/about.html">About</a></li>
           <li><a href="/page/work.html">Work</a></li>
           <li><a href="#">Process</a></li>
@@ -64,7 +64,7 @@
       </nav>
 
       <section class="main">
-        <div class="main_textBox">
+        <div class="main__text-box">
           <p>
             U<span class="point">I</span> / U<span class="point">X</span
             ><br /><span class="point">P</span>ublisher
@@ -75,17 +75,17 @@
           </p>
           <p><span class="point">F</span>ront-<span class="point">E</span>nd</p>
         </div>
-        <div class="main_imgBox">
-          <div class="circle"></div>
-          <div class="character"></div>
+        <div class="main__image-box">
+          <div class="main__circle"></div>
+          <div class="main__character"></div>
         </div>
       </section>
 
       <!-- ABOUT -->
 
       <section class="about">
-        <div class="aboutcontent">
-          <div class="about_textBox">
+        <div class="about__content">
+          <div class="about__text-box">
             <p>
               I am <span class="point">SeonMi Sim</span>,<br />
               a web publisher who adapts quickly to
@@ -93,10 +93,10 @@
               <span class="point">challenges</span>.
             </p>
           </div>
-          <div class="about_imgBox"></div>
-          <div class="about_favorite">
-            <div class="favoriteBox">
-              <div class="favoriteText">
+          <div class="about__image-box"></div>
+          <div class="about__favorite">
+            <div class="about-favorite">
+              <div class="about-favorite__text">
                 <ul>
                   <li><span>What</span></li>
                   <li><span>is My</span></li>
@@ -104,36 +104,36 @@
                   <li><span>Item?</span></li>
                 </ul>
               </div>
-              <div class="favoriteItem">
-                <div class="favoriteItem_l">
-                  <span class="a item" id="l_1"
-                    ><img src="/src/img/main/about/music_08.png" alt=""
+              <div class="about-favorite__items">
+                <div class="about-favorite__col about-favorite__col--left">
+                  <span class="about-favorite__item about-favorite__item--lg" id="l_1"
+                    ><img src="/src/img/main/about/music_08.png" alt="music"
                   /></span>
-                  <span class="c item" id="l_2"
-                    ><img src="/src/img/main/about/Health_03.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--sm" id="l_2"
+                    ><img src="/src/img/main/about/Health_03.png" alt="Health"
                   /></span>
-                  <span class="b item" id="l_3"
-                    ><img src="/src/img/main/about/Interior_04.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--md" id="l_3"
+                    ><img src="/src/img/main/about/Interior_04.png" alt="Interior"
                   /></span>
-                  <span class="a item" id="l_4"
-                    ><img src="/src/img/main/about/plants_02.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--lg" id="l_4"
+                    ><img src="/src/img/main/about/plants_02.png" alt="plants"
                   /></span>
-                  <span class="c item" id="l_5"
-                    ><img src="/src/img/main/about/Shopping_10.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--sm" id="l_5"
+                    ><img src="/src/img/main/about/Shopping_10.png" alt="Shopping"
                   /></span>
                 </div>
-                <div class="favoriteItem_r">
-                  <span class="b item" id="r_1"
-                    ><img src="/src/img/main/about/Camera_05.png" alt=""
+                <div class="about-favorite__col about-favorite__col--right">
+                  <span class="about-favorite__item about-favorite__item--md" id="r_1"
+                    ><img src="/src/img/main/about/Camera_05.png" alt="Camera"
                   /></span>
-                  <span class="c item" id="r_2"
-                    ><img src="/src/img/main/about/coding_06_w.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--sm" id="r_2"
+                    ><img src="/src/img/main/about/coding_06_w.png" alt="coding"
                   /></span>
-                  <span class="b item" id="r_3"
-                    ><img src="/src/img/main/about/cook_07.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--md" id="r_3"
+                    ><img src="/src/img/main/about/cook_07.png" alt="cook"
                   /></span>
-                  <span class="a item" id="r_4"
-                    ><img src="/src/img/main/about/pet_09.png" alt=""
+                  <span class="about-favorite__item about-favorite__item--lg" id="r_4"
+                    ><img src="/src/img/main/about/pet_09.png" alt="pet"
                   /></span>
                 </div>
               </div>
@@ -145,18 +145,19 @@
       <!-- VIDEO -->
 
       <section class="video">
-        <div class="about_circlebox">
-          <div class="aboutcircle"></div>
-          <div class="abouttext"></div>
+        <div class="video__intro">
+          <div class="video__intro-circle"></div>
+          <div class="video__intro-text"></div>
         </div>
-        <div class="videoWrap">
-          <div class="videoBox">
+        <div class="video__wrap">
+          <div class="video__box">
             <video
               src="./src/img/main/video.mov"
               autoplay
               muted
               loop
               playsinline
+              alt="vlog"
             ></video>
           </div>
         </div>
@@ -165,18 +166,18 @@
       <!-- SKILL -->
 
       <section class="skill">
-        <div class="skill__contain container-90">
-          <div class="skill_text">
-            <h4 class="skill_text__title">Software Skills</h4>
-            <p class="skill_text__desc">
+        <div class="skill__container container-90">
+          <div class="skill__text">
+            <h4 class="skill__text-title">Software Skills</h4>
+            <p class="skill__text-desc">
               Photoshop, Illustrator, Figma를 활용한 디자인 작업은 물론
               프론트엔드의 필요한 HTML, CSS, JavaScript, SCSS, Vite, GitHub툴을
               사용하여 실제 구현까지 완성합니다.
             </p>
           </div>
-          <div class="skill_img">
+          <div class="skill__image">
             <ul class="skill__list">
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">01</span>
                   <img
@@ -195,7 +196,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">02</span>
                   <img
@@ -214,12 +215,12 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">03</span>
                   <img
                     src="./src/img/main/skill/jquery.png"
-                    alt="Figma"
+                    alt="jQuery"
                     class="skill-card__img"
                   />
                   <p class="skill-card__name">JQuery</p>
@@ -233,7 +234,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">04</span>
                   <img
@@ -252,7 +253,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">05</span>
                   <img
@@ -271,7 +272,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">06</span>
                   <img
@@ -290,7 +291,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0">
                 <div class="skill-card__front card">
                   <span class="skill-card__num">07</span>
                   <img
@@ -309,7 +310,7 @@
                   </p>
                 </div>
               </li>
-              <li class="skill-card">
+              <li class="skill-card" tabindex="0"> 
                 <div class="skill-card__front card">
                   <span class="skill-card__num">08</span>
                   <img
@@ -334,8 +335,117 @@
       </section>
 
       <!-- WORK -->
+       <section class="work">
+        <div class="work__title-box">
+            <h2 class="work__title">Work</h2>
+            <span class="work__desc">Publishing & Design & Web</span>
+          </div>
+        <div class="work__wrap">
+          <ul class="work__list">
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/publishing01.jpg" alt="work lg oled">
+                <div class="work__text-box">
+                  <p class="work__text">lg oled</p>
+                  <span class="work__subtitle">publishing</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/publishing02.jpg" alt="work onedental">
+                <div class="work__text-box">
+                  <p class="work__text">onedental</p>
+                  <span class="work__subtitle">publishing</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/desing01.jpg" alt="work Lottemall">
+                <div class="work__text-box">
+                  <p class="work__text">Lottemall</p>
+                  <span class="work__subtitle">design</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/desing02.jpg" alt="work onedental">
+                <div class="work__text-box">
+                  <p class="work__text">onedental</p>
+                  <span class="work__subtitle">design</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/desing03.jpg" alt="work Fruit store">
+                <div class="work__text-box">
+                  <p class="work__text">Fruit store</p>
+                  <span class="work__subtitle">design</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/desing04.jpg" alt="work Dream Platform">
+                <div class="work__text-box">
+                  <p class="work__text">Dream Platform</p>
+                  <span class="work__subtitle">design</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/others01.jpg" alt="work marshall">
+                <div class="work__text-box">
+                  <p class="work__text">marshall</p>
+                  <span class="work__subtitle">other</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/others02.jpg" alt="work market B">
+                <div class="work__text-box">
+                  <p class="work__text">market B</p>
+                  <span class="work__subtitle">other</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/others03.jpg" alt="work pawinhand">
+                <div class="work__text-box">
+                  <p class="work__text">pawinhand</p>
+                  <span class="work__subtitle">other</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/others04.jpg" alt="work sns design">
+                <div class="work__text-box">
+                  <p class="work__text">sns design</p>
+                  <span class="work__subtitle">other</span>
+                </div>
+              </button>
+            </li>
+            <li class="work__item">
+              <button type="button" class="work__link">
+                <img class="work__img" src="./src/img/main/work/others05.jpg" alt="work post design">
+                <div class="work__text-box">
+                  <p class="work__text">post design</p>
+                  <span class="work__subtitle">other</span>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+       </section>
 
-      <section class="work">
+      <!-- <section class="work">
         <div class="work__wrap container-90">
           <div class="work__titlebox">
             <h2 class="work__title">Work</h2>
@@ -442,7 +552,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- CONTACT -->
 
