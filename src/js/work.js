@@ -6,8 +6,8 @@ gsap.registerPlugin(ScrollTrigger);
 export function initWork() {
     if (!document.body.classList.contains("work-page")) return;
 
-    const otherItems = document.querySelectorAll(".work__other-item");
-    const otherImages = document.querySelectorAll(".work__other-img");
+    const otherItems = document.querySelectorAll(".work-detail__other-item");
+    const otherImages = document.querySelectorAll(".work-detail__other-img");
 
     otherItems.forEach((item, index) => {
         item.addEventListener("mouseenter", () => {

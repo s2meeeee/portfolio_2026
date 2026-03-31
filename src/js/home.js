@@ -72,9 +72,10 @@ export function initHome() {
     const favoriteMotion = gsap.timeline({
         scrollTrigger: {
             trigger: ".about__content",
-            start: "20% 50%",
-            end: "100% 0%",
+            start: "0% 50%",
+            end: "80% 50%",
             scrub: 1,
+            markers:true
         },
     });
 

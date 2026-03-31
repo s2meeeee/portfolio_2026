@@ -6,11 +6,9 @@ gsap.registerPlugin(ScrollTrigger);
 export function initAbout() {
   if (!document.body.classList.contains("about-page")) return;
 
-  const upBox = document.querySelectorAll(".upBox");
-
   const aboutTl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".about__timeline",
+      trigger: ".about-detail__timeline",
       pin: true,
       scrub: 1,
       start: "top top",
@@ -47,7 +45,7 @@ export function initAbout() {
     );
 
   gsap.fromTo(
-    ".about__intro-title",
+    ".about-detail__intro-title",
     {
       y: 100,
       opacity: 0,
@@ -57,7 +55,7 @@ export function initAbout() {
       opacity: 1,
       duration: 1,
       scrollTrigger: {
-        trigger: ".about__intro",
+        trigger: ".about-detail__intro",
         start: "top 90%",
         toggleActions: "play none none reverse",
         //markers: true,
@@ -65,22 +63,22 @@ export function initAbout() {
     },
   );
 
-  // about__content 배경색변경
+  // about-detail__content 배경색변경
 
   const colorChange = {
-    trigger: ".about__content",
+    trigger: ".about-detail__content",
     start: "top bottom",
     end: "30% 50%",
     scrub: true,
     //markers:true,
   }
 
-  gsap.to(".about", {
+  gsap.to(".about-detail", {
     backgroundColor: "#0b0b0b",
     scrollTrigger: colorChange,
   })
 
-  gsap.to(".about__intro", {
+  gsap.to(".about-detail__intro", {
     color: "#fff",
     scrollTrigger: colorChange,
   });
@@ -109,7 +107,7 @@ export function initAbout() {
     strokeDashoffset: 0,
     ease: "none",
     scrollTrigger: {
-      trigger: ".about__content",
+      trigger: ".about-detail__content",
       start: "top 50%",
       end: "80% 80%",
       scrub: 2,
@@ -122,7 +120,7 @@ export function initAbout() {
     strokeDashoffset: 0,
     ease: "none",
     scrollTrigger: {
-      trigger: ".about__content",
+      trigger: ".about-detail__content",
       start: "60% 50%",
       end: "80% 30%",
       scrub: 1,
@@ -130,7 +128,7 @@ export function initAbout() {
     },
   });
 
-  const rows = gsap.utils.toArray(".about__card-row");
+  const rows = gsap.utils.toArray(".about-detail__card-row");
 
   rows.forEach((row, index) => {
     gsap.fromTo(row, {
@@ -154,7 +152,7 @@ export function initAbout() {
 
 
   gsap.fromTo(
-    ".about__link",
+    ".about-detail__link",
     {
       y: 100,
       opacity: 0,
@@ -166,7 +164,7 @@ export function initAbout() {
       ease: "power3.out",
       stagger: 0.2, // ⭐ 하나씩 올라오는 핵심
       scrollTrigger: {
-        trigger: ".about__links",
+        trigger: ".about-detail__links",
         start: "top 100%",
         end: "50% 50%",
         toggleActions: "play none none none",
@@ -176,5 +174,3 @@ export function initAbout() {
     }
   );
 }
-
-
