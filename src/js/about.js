@@ -6,6 +6,21 @@ gsap.registerPlugin(ScrollTrigger);
 export function initAbout() {
   if (!document.body.classList.contains("about-page")) return;
 
+
+  const aboutScroll = document.querySelector(".about-scroll");
+
+  // 요소없으면 종료하기
+  if(!aboutScroll) return;
+
+  // 스크롤 이벤트
+  window.addEventListener("scroll", () => {
+    if(window.scrollY >50){
+      aboutScroll.classList.add("scroll-hide");
+    }else{
+      aboutScroll.classList.remove("scroll-hide");
+    }
+  });
+
   const aboutTl = gsap.timeline({
     scrollTrigger: {
       trigger: ".about-detail__timeline",
@@ -166,7 +181,7 @@ export function initAbout() {
       scrollTrigger: {
         trigger: ".about-detail__links",
         start: "top 100%",
-        end: "50% 50%",
+        end: "50% 20%",
         toggleActions: "play none none none",
         scrub: 1,
         markers: true,
