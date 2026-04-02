@@ -8,7 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 import { initHome } from "./home.js";
 import { initAbout } from "./about.js";
 import { initWork } from "./work.js";
+import { initTopButton } from "./topButton.js";
 
 initHome();
 initAbout();
 initWork();
+initTopButton();

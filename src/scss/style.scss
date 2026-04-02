@@ -9,9 +9,10 @@
 
 /* 4) 컴포넌트 */
 @use "./components/header";
+@use "./components/top-button";
 
 /* 5) 페이지 */
 @use "./pages/main";
 @use "./pages/about";
 @use "./pages/work";
-
+@use "./pages/contact"
