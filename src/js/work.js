@@ -7,6 +7,7 @@ export function initWork() {
     if (!document.body.classList.contains("work-page")) return;
 
     initPublishingSection();
+    initDesignModal();
     const otherItems = document.querySelectorAll(".work-detail__other-item");
     const otherImages = document.querySelectorAll(".work-detail__other-img");
 
@@ -23,6 +24,53 @@ export function initWork() {
 
 
 
+}
+
+function initDesignModal() {
+    const modal = document.querySelector("[data-design-modal]");
+    const modalImage = modal?.querySelector("[data-design-modal-image]");
+    const modalTitle = modal?.querySelector(".work-detail__design-modal-title");
+    const triggers = document.querySelectorAll("[data-design-modal-trigger]");
+    const closeButtons = modal?.querySelectorAll("[data-design-modal-close]");
+
+    if (!modal || !modalImage || !modalTitle || !triggers.length) return;
+
+    const openModal = ({ image, title, alt }) => {
+        modalImage.setAttribute("src", image);
+        modalImage.setAttribute("alt", alt || title || "디자인 상세 이미지");
+        modalTitle.textContent = title || "";
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    };
+
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("click", (event) => {
+            event.preventDefault();
+
+            openModal({
+                image: trigger.dataset.modalImage || trigger.getAttribute("href") || "",
+                title: trigger.dataset.modalTitle || "",
+                alt: trigger.dataset.modalAlt || "",
+            });
+        });
+    });
+
+    closeButtons?.forEach((button) => {
+        button.addEventListener("click", closeModal);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+        }
+    });
 }
 
 function initPublishingSection() {

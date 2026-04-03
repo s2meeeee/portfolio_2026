@@ -274,21 +274,101 @@ html {
 
 
   }
-
+  
+.work-detail__design-item{
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
 
 
   .work-detail__design-media {
     width: 100%;
     height: 400px;
     border-radius: 20px;
-    border: 2px solid #000;
+    overflow: hidden;
+    box-sizing: border-box;
+          position: relative;
+
+
 
 
     @media (max-width: 550px) {
       height: 300px;
 
     }
+    >a{
+      width: 100%;
+      height: 100%;
+
+
+      >img{
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      
+    }
+    }
+    
   }
+
+  .work-detail__design-media >a::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: url(/src/img/work/readMore3.png) no-repeat center/100px;
+
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    transition: all 0.3s;
+    opacity: 0;
+    animation-name: spin;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      transition: .4s;
+  }
+    .work-detail__design-media >a::after {
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-radius: 100%;
+      background:#fff;
+      position: absolute; 
+      top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+      
+    }
+
+    @keyframes spin {
+      0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+      }
+            100%{
+        transform: translate(-50%,-50%) rotate(365deg);
+      }
+
+    }
+
+ .work-detail__design-media:hover >a>img{
+  filter: brightness(0.6);
+ }   
+.work-detail__design-media:hover >a::before{
+  opacity: 1;
+}
+
+.work-detail__design-media:hover >a::after{
+  width: 120px;
+  height: 120px;
+}
 
   .work-detail__design-content {
 
@@ -321,6 +401,118 @@ html {
         line-height: 1.2;
       }
     }
+  }
+
+  .work-detail__design-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    @media (max-width: 750px) {
+      padding: 20px;
+    }
+  }
+
+  .work-detail__design-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .work-detail__design-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    background: rgba(0, 0, 0, 0.72);
+    cursor: pointer;
+  }
+
+  .work-detail__design-modal-dialog {
+    position: relative;
+    width: min(1080px, 100%);
+    max-height: calc(100vh - 64px);
+    padding: 28px 28px 24px;
+    border-radius: 28px;
+    background: #f8f5ef;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    transform: translateY(18px) scale(0.96);
+    transition: transform 0.35s ease;
+
+    @media (max-width: 750px) {
+      padding: 20px 20px 18px;
+      border-radius: 22px;
+      max-height: calc(100vh - 40px);
+    }
+  }
+
+  .work-detail__design-modal.is-open .work-detail__design-modal-dialog {
+    transform: translateY(0) scale(1);
+  }
+
+  .work-detail__design-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    color: #111;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.14);
+      transform: rotate(90deg);
+    }
+  }
+
+  .work-detail__design-modal-head {
+    padding-right: 56px;
+    margin-bottom: 18px;
+  }
+
+  .work-detail__design-modal-label {
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7b7b7b;
+  }
+
+  .work-detail__design-modal-title {
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  .work-detail__design-modal-body {
+    max-height: calc(100vh - 200px);
+    border-radius: 20px;
+    background: #fff;
+    overflow: auto;
+
+    @media (max-width: 750px) {
+      max-height: calc(100vh - 170px);
+    }
+  }
+
+  .work-detail__design-modal-image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   // =====================
