@@ -55,7 +55,7 @@ function initDesignModal() {
             event.preventDefault();
 
             openModal({
-                image: trigger.dataset.modalImage || trigger.getAttribute("href") || "",
+                image: trigger.dataset.modalImage || "",
                 title: trigger.dataset.modalTitle || "",
                 alt: trigger.dataset.modalAlt || "",
             });
