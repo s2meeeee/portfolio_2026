@@ -7,23 +7,8 @@ export function initWork() {
     if (!document.body.classList.contains("work-page")) return;
 
     initPublishingSection();
-    initDesignModal();
-    const otherItems = document.querySelectorAll(".work-detail__other-item");
-    const otherImages = document.querySelectorAll(".work-detail__other-img");
-
-    otherItems.forEach((item, index) => {
-        item.addEventListener("mouseenter", () => {
-            otherItems.forEach((el) => el.classList.remove("is-active"));
-            otherImages.forEach((img) => img.classList.remove("is-active"));
-
-            item.classList.add("is-active");
-            otherImages[index].classList.add("is-active");
-        });
-    });
-
-
-
-
+    const modalControls = initDesignModal();
+    initOtherSection(modalControls);
 }
 
 function initDesignModal() {
@@ -33,7 +18,7 @@ function initDesignModal() {
     const triggers = document.querySelectorAll("[data-design-modal-trigger]");
     const closeButtons = modal?.querySelectorAll("[data-design-modal-close]");
 
-    if (!modal || !modalImage || !modalTitle || !triggers.length) return;
+    if (!modal || !modalImage || !modalTitle) return null;
 
     const openModal = ({ image, title, alt }) => {
         modalImage.setAttribute("src", image);
@@ -50,17 +35,19 @@ function initDesignModal() {
         document.body.style.overflow = "";
     };
 
-    triggers.forEach((trigger) => {
-        trigger.addEventListener("click", (event) => {
-            event.preventDefault();
+    if (triggers.length) {
+        triggers.forEach((trigger) => {
+            trigger.addEventListener("click", (event) => {
+                event.preventDefault();
 
-            openModal({
-                image: trigger.dataset.modalImage || "",
-                title: trigger.dataset.modalTitle || "",
-                alt: trigger.dataset.modalAlt || "",
+                openModal({
+                    image: trigger.dataset.modalImage || "",
+                    title: trigger.dataset.modalTitle || "",
+                    alt: trigger.dataset.modalAlt || "",
+                });
             });
         });
-    });
+    }
 
     closeButtons?.forEach((button) => {
         button.addEventListener("click", closeModal);
@@ -70,6 +57,58 @@ function initDesignModal() {
         if (event.key === "Escape" && modal.classList.contains("is-open")) {
             closeModal();
         }
+    });
+
+    return { openModal, closeModal };
+}
+
+function initOtherSection(modalControls) {
+    const otherItems = document.querySelectorAll(".work-detail__other-item");
+    const otherImages = document.querySelectorAll(".work-detail__other-img");
+
+    if (!otherItems.length || otherItems.length !== otherImages.length) return;
+
+    const setActiveItem = (activeIndex) => {
+        otherItems.forEach((item, index) => {
+            item.classList.toggle("is-active", index === activeIndex);
+        });
+
+        otherImages.forEach((image, index) => {
+            image.classList.toggle("is-active", index === activeIndex);
+        });
+    };
+
+    otherItems.forEach((item, index) => {
+        const previewImage = otherImages[index]?.querySelector("img");
+        const previewButton = otherImages[index]?.querySelector("button");
+        const title = item.querySelector(".work-detail__other-name")?.textContent?.trim() || "";
+
+        item.setAttribute("tabindex", "0");
+        item.setAttribute("role", "button");
+        item.setAttribute("aria-label", `${title} preview open`);
+
+        item.addEventListener("mouseenter", () => {
+            setActiveItem(index);
+        });
+
+        item.addEventListener("click", () => {
+            setActiveItem(index);
+
+            if (!modalControls?.openModal || !previewImage) return;
+
+            modalControls.openModal({
+                image: previewButton?.dataset.modalImage || previewImage.getAttribute("src") || "",
+                title,
+                alt: previewButton?.dataset.modalAlt || previewImage.getAttribute("alt") || title,
+            });
+        });
+
+        item.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+
+            event.preventDefault();
+            item.click();
+        });
     });
 }
 
