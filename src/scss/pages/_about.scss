@@ -88,6 +88,7 @@
   .about-detail__timeline {
     width: 100%;
     height: 100vh;
+    position: relative;
   }
 
   .about-detail__timeline-text {
@@ -113,12 +114,17 @@
 
   .about-detail__timeline-image {
     width: 70%;
+    height: auto;
     margin: 0 auto;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
   }
 
   .about-detail__timeline-list {
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
   .about-detail__timeline-item {
