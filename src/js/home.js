@@ -75,7 +75,7 @@ export function initHome() {
             start: "0% 50%",
             end: "80% 50%",
             scrub: 1,
-            markers:true
+            //markers:true
         },
     });
 

@@ -184,7 +184,7 @@ export function initAbout() {
         end: "50% 20%",
         toggleActions: "play none none none",
         scrub: 1,
-        markers: true,
+        //markers: true,
       },
     }
   );
