@@ -59,22 +59,58 @@ function initDesignModal() {
     const modalTitle = modal?.querySelector(".work-detail__design-modal-title");
     const triggers = document.querySelectorAll("[data-design-modal-trigger]");
     const closeButtons = modal?.querySelectorAll("[data-design-modal-close]");
+    let pendingImageRequest = 0;
 
     if (!modal || !modalImage || !modalTitle) return null;
 
     const openModal = ({ image, title, alt }) => {
-        modalImage.setAttribute("src", resolveWorkImagePath(image) || image);
-        modalImage.setAttribute("alt", alt || title || "디자인 상세 이미지");
+        const nextImageSrc = resolveWorkImagePath(image) || image;
+        const nextAlt = alt || title || "디자인 상세 이미지";
+        const requestId = ++pendingImageRequest;
+
         modalTitle.textContent = title || "";
         modal.classList.add("is-open");
         modal.setAttribute("aria-hidden", "false");
         document.body.style.overflow = "hidden";
+
+        modal.classList.add("is-loading");
+        modalImage.classList.remove("is-visible");
+        modalImage.removeAttribute("src");
+        modalImage.setAttribute("alt", nextAlt);
+
+        if (!nextImageSrc) {
+            modal.classList.remove("is-loading");
+            return;
+        }
+
+        const preloadImage = new Image();
+
+        preloadImage.addEventListener("load", () => {
+            if (requestId !== pendingImageRequest) return;
+
+            modalImage.setAttribute("src", nextImageSrc);
+            modalImage.setAttribute("alt", nextAlt);
+            modal.classList.remove("is-loading");
+            modalImage.classList.add("is-visible");
+        });
+
+        preloadImage.addEventListener("error", () => {
+            if (requestId !== pendingImageRequest) return;
+
+            modal.classList.remove("is-loading");
+            modalImage.classList.remove("is-visible");
+        });
+
+        preloadImage.src = nextImageSrc;
     };
 
     const closeModal = () => {
+        pendingImageRequest += 1;
         modal.classList.remove("is-open");
+        modal.classList.remove("is-loading");
         modal.setAttribute("aria-hidden", "true");
         document.body.style.overflow = "";
+        modalImage.classList.remove("is-visible");
     };
 
     if (triggers.length) {
