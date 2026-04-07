@@ -3,12 +3,54 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const workImageModules = import.meta.glob("../img/work/*", {
+    eager: true,
+    import: "default",
+});
+
+const workImageAssetMap = Object.entries(workImageModules).reduce((map, [filePath, assetUrl]) => {
+    const fileName = filePath.split("/").pop();
+
+    if (!fileName || typeof assetUrl !== "string") return map;
+
+    map.set(fileName.normalize("NFC"), assetUrl);
+    map.set(fileName.normalize("NFD"), assetUrl);
+
+    return map;
+}, new Map());
+
 export function initWork() {
     if (!document.body.classList.contains("work-page")) return;
 
+    hydrateWorkImageSources();
     initPublishingSection();
     const modalControls = initDesignModal();
     initOtherSection(modalControls);
+}
+
+function hydrateWorkImageSources() {
+    const images = document.querySelectorAll("img[src]");
+
+    images.forEach((image) => {
+        const resolvedSrc = resolveWorkImagePath(image.getAttribute("src"));
+
+        if (resolvedSrc) {
+            image.setAttribute("src", resolvedSrc);
+        }
+    });
+}
+
+function resolveWorkImagePath(rawPath) {
+    if (!rawPath || !rawPath.includes("src/img/work/")) return "";
+
+    const fileName = rawPath.split("/").pop();
+    if (!fileName) return "";
+
+    return (
+        workImageAssetMap.get(fileName.normalize("NFC")) ||
+        workImageAssetMap.get(fileName.normalize("NFD")) ||
+        ""
+    );
 }
 
 function initDesignModal() {
@@ -21,7 +63,7 @@ function initDesignModal() {
     if (!modal || !modalImage || !modalTitle) return null;
 
     const openModal = ({ image, title, alt }) => {
-        modalImage.setAttribute("src", image);
+        modalImage.setAttribute("src", resolveWorkImagePath(image) || image);
         modalImage.setAttribute("alt", alt || title || "디자인 상세 이미지");
         modalTitle.textContent = title || "";
         modal.classList.add("is-open");

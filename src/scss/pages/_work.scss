@@ -285,11 +285,14 @@ html {
       cursor: pointer;
 
       > img {
+        display: block;
+        width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        object-fit: cover;
       }
     }
   }
@@ -299,7 +302,7 @@ html {
     width: 120px;
     height: 120px;
     border-radius: 100%;
-    background: url(/src/img/work/readMore3.png) no-repeat center/100px;
+    background: url("../img/work/readMore3.png") no-repeat center/100px;
 
     position: absolute;
     top: 50%;
