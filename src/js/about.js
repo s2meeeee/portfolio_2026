@@ -28,6 +28,7 @@ export function initAbout() {
       scrub: 1,
       start: "top top",
       end: "+=450%",
+      invalidateOnRefresh: true,
       // markers: true,
     },
   });
@@ -50,7 +51,7 @@ export function initAbout() {
     .from(
       ".upBox",
       {
-        y: "400%",
+        y: () => window.innerHeight * 1.1,
         opacity: 0,
         stagger: 0.4,
         duration: 1,
