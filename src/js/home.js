@@ -12,6 +12,7 @@ export function initHome() {
                     start: "top top",
                     end: "bottom 30%",
                     scrub: 1,
+                    // markers:true
                 },
             });
 
@@ -127,30 +128,30 @@ export function initHome() {
         2,
     );
 
-    // video
+    // // video
 
-    gsap
-        .timeline({
-            scrollTrigger: {
-                trigger: ".video",
-                start: "0% 70%",
-                end: "80% 100%",
-                scrub: 1,
-                //markers: true,
-            },
-        })
+    // gsap
+    //     .timeline({
+    //         scrollTrigger: {
+    //             trigger: ".video",
+    //             start: "0% 70%",
+    //             end: "80% 100%",
+    //             scrub: 1,
+    //             //markers: true,
+    //         },
+    //     })
 
-        .fromTo(
-            ".video__wrap .video__box",
-            { "clip-path": "inset(60% 60% 60% 60% round 30%)" },
-            { "clip-path": "inset(0% 0% 0% 0% round 0%)", ease: "none", duration: 10 },
-            0,
-        )
-        .to(
-            ".video__intro-circle",
-            { width: "2500px", height: "1000px", ease: "none", duration: 3 },
-            0,
-        );
+    //     .fromTo(
+    //         ".video__wrap .video__box",
+    //         { "clip-path": "inset(60% 60% 60% 60% round 30%)" },
+    //         { "clip-path": "inset(0% 0% 0% 0% round 0%)", ease: "none", duration: 10 },
+    //         0,
+    //     )
+    //     .to(
+    //         ".video__intro-circle",
+    //         { width: "2500px", height: "1000px", ease: "none", duration: 3 },
+    //         0,
+    //     );
 
    
     // work
