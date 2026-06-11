@@ -3,12 +3,26 @@ const menuButton = document.querySelector(".navHamburg");
 const fullNav = document.querySelector(".nav--full");
 const fullNavLinks = document.querySelectorAll(".nav--full a");
 
+if (fullNav && !fullNav.querySelector(".nav--full__close")) {
+  const closeButton = document.createElement("button");
+  closeButton.type = "button";
+  closeButton.className = "nav--full__close";
+  closeButton.setAttribute("aria-label", "Close menu");
+  closeButton.innerHTML = `
+    <span></span>
+    <span></span>
+  `;
+
+  fullNav.prepend(closeButton);
+}
+
 const closeMenu = () => {
   if (!menuButton || !fullNav) return;
 
   fullNav.classList.remove("is-open");
   document.body.classList.remove("menu-open");
   menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open menu");
   document.body.style.overflow = "";
 };
 
@@ -18,6 +32,7 @@ const openMenu = () => {
   fullNav.classList.add("is-open");
   document.body.classList.add("menu-open");
   menuButton.setAttribute("aria-expanded", "true");
+  menuButton.setAttribute("aria-label", "Close menu");
   document.body.style.overflow = "hidden";
 };
 
@@ -61,10 +76,16 @@ if (menuButton && fullNav) {
 
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".navHamburg");
+    const closeButton = event.target.closest(".nav--full__close");
     const nav = event.target.closest(".nav--full");
 
     if (button) {
       toggleMenu();
+      return;
+    }
+
+    if (closeButton) {
+      closeMenu();
       return;
     }
 
