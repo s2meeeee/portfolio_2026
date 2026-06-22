@@ -7,6 +7,7 @@ export default defineConfig({
         main: "index.html",
         about: "page/about.html",
         work: "page/work.html",
+        contact: "page/contact.html",
       },
     },
   },
